@@ -24,7 +24,6 @@ for(i=0;i<m;i++)
 printf("%3d",ref[i]);
 printf("\n\n");
 for(i=0;i<n;i++)
-For BCS / BCA Classes Call on 9730381255 / www.nrclassespune.com / www.bcsbca.com
 {
 for(j=0;j<m;j++)
 {
@@ -70,7 +69,6 @@ for(i=0;i<m && sp<n;i++)
 k=search(ref[i]);
 if(k==-1)
 {
-For BCS / BCA Classes Call on 9730381255 / www.nrclassespune.com / www.bcsbca.com
 frames[sp]=ref[i];
 count[sp]++;
 faults++;
@@ -106,6 +104,10 @@ lfu();
 disp();
 return 0;
 }
+
+
+
+
 Slip 1_2/Slip13_1/Slip14_1/Slip20_1:Write a C program to implement the shell which displays the
 command prompt “myshell$”. It accepts the command, tokenize the command line and execute
 it by creating the child process. Also implement the additional command ‘typeline’ as
@@ -159,7 +161,6 @@ i = 0;
 while(read(fh, &c, 1) > 0)
 {
 printf("%c", c);
-For BCS / BCA Classes Call on 9730381255 / www.nrclassespune.com / www.bcsbca.com
 if(c == '\n')
 i++;
 if(i == n)
