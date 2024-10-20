@@ -1,4 +1,5 @@
-# os#include <stdio.h>
+# os
+#include <stdio.h>
 #include <string.h>
 #include <sys/types.h>
 #include <sys/wait.h>
