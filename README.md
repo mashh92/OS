@@ -1,1403 +1,1119 @@
-Slip 1_1 / Slip11_1:Write the simulation program to implement demand paging and show the
-page scheduling and total number of page faults according to the LFU page replacement
-algorithm. Assume the memory of n frames.
-Reference String : 3,4,5,4,3,4,7,2,4,5,6,7,2,4,6
+Slip 1: Write the HTML code for generating the form as shown below. Apply the
+internal CSS to following form to change the font size of the heading to 6pt and change
+the color to red and alsochange the background color to yellow.
+Solution:
+<html>
+<head>
+<title>slip 1</title>
+<style>
+body{background-color: yellow;}
+table {background-color: turquoise;}
+h3 { font-size: 6pt; color:red;}
+</style>
+</head>
+<body>
+<center>
+<h3> Project Management </h3>
+<table border="3" height="200px" width="400px">
+<form name=frmlogin><br>
+<tr><td>Enter Project Name:</td><td><input type=text name=t1
+placeholder=projectname><br><br></td></tr>
+<tr><td>Assignned to:</td><td><select name="Names" id="nm" form="frmlogin">
+<option value="ross">Ross Geller</option>
+<option value="chuck">Chuck Bass</option>
+<option value="rachel">Rachel Green </option>
+<option value="dan">Dan James</option>
+</select></td></tr>
+<tr><td>Start Date:</td><td><input type="date" ></td></tr>
+<tr><td>End Date:</td><td><input type="date"> </td></tr>
+<tr><td>Priority:</td><br>
+<td><input type=radio name=ck value="high">High<br>
+<input type=radio name=ck value="avg">Average <br>
+<input type=radio name=ck value="low">Low</td></tr>
+<tr><td>Description:</td><td><input type=text name="dt"
+value="description"></td></tr>
+<tr><td><input type=submit value ="submit"></td>
+<td><input type=reset value ="clear"></td></tr>
+</table>
+</center>
+</body>
+</html>
+
+  
+Slip 2: Create HTML5 page with following specifications
+i) Title should be about your City.
+ii) Color the background by Pink color.
+iii) Place your city name at the top of page in large text and in blue color.
+iv) Add names of the landmarks in your city, each in different color, style and font
+v) Add any image at the bottom. (Use inline CSS to format the web page)
+Solution:
+<html>
+<head>
+<title>PUNE</title>
+<body style="background-color:Pink;">
+<h3 style="font-size:100px; color:blue;"> PUNE</h3>
+<ul>
+<li style="color:brown; font-style: italic;">Dagadu Seth Ganpati Temple</li>
+<li style="color:red; font-style: oblique;">Saras Baug Temple</li>
+<li style="color:purple; font-style: italic;">Phoenix Market City Pune</li>
+</ul>
+<img src="https://mittalbuilders.com/wp-content/uploads/2020/12/Reasons-to-
+settle-down-in-Pune.png" width="200" height="200" align="bottom">
+</body>
+</head>
+</html>
 
 
+Slip 3:
+Write a program using html with following CSS specifications-
+i. The background colour of the company name should be in green.
+ii. The text colour of the company name should be red.
+iii. The heading should be large –with font ''comic sans ms''
+iv. The description of the company should be displayed in blue color in a
+paragraph.
+<html>
+<head>
+<title>Accenture</title></head>
+<body style="background-color:#4CBB17">
+<h3 style="font-size:60px; color:red; font-style:Comic Sans MS "> Accenture</h3>
+<p style=" color:blue; font-size:25px">Accenture plc is an Irish-American professional
+services company based in Dublin,
+specializing in information technology (IT) services and consulting.<br>
+As of 2022,Accenture is considered
+the largest consulting firm in the world by number of employees.<br>
+Accenture is a $61.6-billion-in-annual-revenue technology and consulting company
+incorporated in Dublin, Ireland.
+Led by Chair & CEO Julie Sweet, who prior to her promotion in 2019 served as CEO of
+Accentures business in North America,
+the Fortune Global 500 information technology services company has supplemented its
+growth
+through high-profile acquisitions like that of ad agency Droga5. With 721,000 people
+worldwide</p>
+</html>
 
-#include<stdio.h>
-#define MAX 20
-int frames[MAX],ref[MAX],mem[MAX][MAX],faults,
-sp,m,n,count[MAX];
-void accept()
-{
-int i;
-printf("Enter no.of frames:");
-scanf("%d", &n);
-printf("Enter no.of references:");
-scanf("%d", &m);
-printf("Enter reference string:\n");
-for(i=0;i<m;i++)
-{
-printf("[%d]=",i);
-scanf("%d",&ref[i]);
+  
+Slip4: Write a HTML code, which generate the following output
+List of Books
+Item No Item Name Price
+Rs. Paise
+1 Programming in Python 500 50
+2 Programming in Java 345 00
+MOBILE: 9730381255 | WWW.NRCLASSESPUNE.COM | WWW.BCSBCA.COM
+<html>
+<body>
+<table border = 1>
+<caption>list of book </caption>
+<tr>
+<td rowspan=2>item no </td>
+<td rowspan=2>Item name </td>
+<td colspan=2 > price
+<tr>
+<td >Rs </td>
+<td >paise</td>
+</td>
+</tr>
+</tr>
+<tr>
+<td>1</td>
+<td>programming in python </td>
+<td>500</td><td>50</td>
+</tr>
+<tr>
+<td>2</td>
+<td>programming in java </td>
+<td>345</td><td>00</td>
+</tr>
+</body>
+</html>
+
+  
+Slip5: Create following Bootstrap Web Layout Design and change Title, add your
+personal information, educational information, job profile.
+<html lang="en">
+<head>
+<title>NR Class</title>
+<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+<div class="jumbotron">
+<center><h1>My First Bootstrap Page</h1></center>
+<center><p>This is responsive</p></center>
+</div>
+<div class="row">
+<div class="col-3 offset-1 bg-light">
+<h4>Personal Information</h4>
+<p>name</p>
+</div>
+<div class="col-3 offset-1 bg-light">
+<h4>Educational Information</h4>
+<p>name</p>
+</div>
+<div class="col-3 offset-1 bg-light">
+<h4>Job Profile</h4>
+<p>name</p>
+</div>
+</div>
+</body>
+</html>
+
+
+Slip 6: Create following Bootstrap Web Layout Design and set Header background color
+Blue, add your College name, set Menu section background color green create menu About
+Us, In content section add college information, background color yellow, Footer section
+backgroundcolor red, add address of college.
+<html>
+<head>
+<link rel="stylesheet" href="bootstrap.min.css">
+<title>NRC</title>
+</head>
+<body>
+<div class="row ">
+<div class="col-12 bg-primary">
+<h3>header</h3>
+</div>
+</div>
+<div class="row">
+<div class="col-4 bg-info">
+<h4>Menu</h4>
+</div>
+<div class="col-8 bg-warning ">
+<p>this is collge information</p>
+</div>
+</div>
+<div class="row">
+<div class="col-12 bg-danger">
+<h3>Footer</h3>
+</div>
+</div>
+</body>
+</html>
+
+
+Slip7 Design HTML 5 Page Using CSS Which Displays the following Navigation Bar
+<html>
+<head>
+<title>Navigation Bar</title>
+<style>
+li {
+display:inline;
 }
+</style>
+</head>
+<body style="font-size:40px">
+<ul>
+<li><a href="HOME.asp" style="color:white; background-
+color:grey;">HOME</a></li>
+<li> <a href="JAVA.asp" style="color:blue; background-
+color:#D3D3D3;">Java</a></li>
+<li ><a href="HTML.asp" style="color:blue; background-
+color:#D3D3D3;">HTML</a></li>
+<li><a href="CSS.asp" style="color:blue; background-
+color:#D3D3D3;">CSS</a></li>
+</ul>
+</body>
+</html>
+
+
+Slip8: Design an HTML form to accept two strings from the user. Write a PHP script for
+thefollowing.
+a. Find whether the small string appears at the start of the large string.
+b. Find the position of the small string in the big string.
+c. Compare both the string for first n characters, also the comparison should not be case
+sensitive.
+HTML FILE
+<html>
+<body>
+<form action="slip_8.php" method="get">
+enter first string:<input type="text" name="str1"><br>
+enter second string:<input type="text" name="str2"><br>
+<input type="submit" value="submit">
+</form>
+</body>
+</html>
+PHP FILE
+<?php
+$a=$_GET["str1"];
+$b=$_GET["str2"];
+//$len1=strlen($a);
+//$len2=strlen($b);
+echo "Length $len1 $len2";
+$pos=strpos($a,$b);
+if($pos==0)
+{
+echo"the small string appears at the start of the large string<br>";
 }
-void disp()
-{
-int i,j;
-for(i=0;i<m;i++)
-printf("%3d",ref[i]);
-printf("\n\n");
-for(i=0;i<n;i++)
-{
-for(j=0;j<m;j++)
-{
-if(mem[i][j])
-printf("%3d",mem[i][j]);
 else
-printf(" ");
-}
-printf("\n");
-}
-printf("Total Page Faults: %d\n",faults);
-}
-int search(int pno)
 {
-int i;
-for(i=0;i<n;i++)
-{
-if(frames[i]==pno)
-return i;
+echo"small string does not appear at the start of the large string<br>";
 }
-return -1;
-}
-int get_lfu(int sp)
-{
-int i,min_i,min=9999;
-i=sp;
-do
-{
-if(count[i]<min)
-{
-min = count[i];
-min_i = i;
-}
-i=(i+1)%n;
-}while(i!=sp);
-return min_i;
-}
-void lfu()
-{
-int i,j,k;
-for(i=0;i<m && sp<n;i++)
-{
-k=search(ref[i]);
-if(k==-1)
-{
-frames[sp]=ref[i];
-count[sp]++;
-faults++;
-sp++;
-for(j=0;j<n;j++)
-mem[j][i]=frames[j];
-}
+$pos=strpos($a,$b);
+echo"the small string appears at $pos position<br>";
+if(strcasecmp($a,$b)==0)
+echo "Both Strings are equal<br>";
+else if(strcasecmp($a,$b)>0)
+echo "first string bigger<br>";
 else
-count[k]++;
-}
-sp=0;
-for(;i<m;i++)
-{
-k = search(ref[i]);
-if(k==-1)
-{
-sp = get_lfu(sp);
-frames[sp] = ref[i];
-count[sp]=1;
-faults++;
-sp = (sp+1)%n;
-for(j=0;j<n;j++)
-mem[j][i] = frames[j];
-}
-else
-count[k]++;
-}
-}
-int main()
-{
-accept();
-lfu();
-disp();
-return 0;
-}
+echo "second string is bigger<br>";
+?>
 
 
-
-
-Slip 1_2/Slip13_1/Slip14_1/Slip20_1:Write a C program to implement the shell which displays the
-command prompt “myshell$”. It accepts the command, tokenize the command line and execute
-it by creating the child process. Also implement the additional command ‘typeline’ as
-typeline +n filename :- To print first n lines in the file.
-typeline -a filename :- To print all lines in the file.
-
-
-
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <fcntl.h>
-#include <dirent.h>
-#include <unistd.h>
-int make_toks(char *s, char *tok[])
+Slip9: Write a PHP script for the following: Design a form having a text box and a drop
+down listcontaining any 3 separators(e.g. #, |, %, @, ! or comma) accept a strings from the
+user and also aseparator.
+a. Split the string into separate words using the given separator.
+b. Replace all the occurrences of separator in the given string with some other separator.
+c. Find the last word in the given string.
+HTML FILE
+<html>
+<body>
+<form action="slip_9.php"method="get">
+Enter a string:<input type="text" name="str1"><br>
+choose a label
+<select name="sep" id="sep">
+<option value="#">#</option>
+<option value="!">!</option>
+<option value="@">@</option>
+</select><br>
+<input type="radio" name="op" value="a">Split The String Using The Seperator<br>
+<input type="radio" name="op" value="b">Replace The Occurences Of The
+Seperator With Another Seperator<br>
+<input type="radio" name="op" value="c">Find The Last Word Of The String<br>
+<input type="submit"value="submit">
+</form>
+</body>
+</html>
+PHP FILE
+<?php
+$str=$_GET['str1'];
+$sep=$_GET['sep'];
+$op=$_GET['op'];
+//echo "$str $sep $op";
+switch($op)
 {
-int i = 0;
-char *p;
-p = strtok(s, " ");
-while(p != NULL)
-{
-tok[i++] = p;
-p = strtok(NULL, " ");
+case 'a':$m=explode($sep,$str);
+foreach($m as $a){
+echo "$a<br>";
 }
-tok[i] = NULL;
-return i;
-}
-void typeline(char *op, char *fn)
-{
-int fh, i, j, n;
-char c;
-fh = open(fn, O_RDONLY);
-if(fh == -1)
-{
-printf("File %s not found.\n", fn);
-return;
-}
-if(strcmp(op, "a") == 0)
-{
-while(read(fh, &c, 1) > 0)
-printf("%c", c);
-close(fh);
-return;
-}
-n = atoi(op);
-if(n > 0)
-{
-i = 0;
-while(read(fh, &c, 1) > 0)
-{
-printf("%c", c);
-if(c == '\n')
-i++;
-if(i == n)
+break;
+case 'b':
+$cnt=substr_count($str,$sep);
+$n=str_replace($sep,"!",$str,$cnt);
+echo "After changing separators<br>";
+echo $n;
+break;
+case 'c':$ar=explode(" ",$str);
+$cnt=count($ar);
+echo "This is the last word : ".$ar[$cnt-1];
 break;
 }
+?>
+
+
+Slip10: Write a script to accept two integers(Use html form having 2
+textboxes).Write a PHP script to,
+a. Find mod of the two numbers.
+b. Find the power of first number raised to the second.
+c. Find the sum of first n numbers (considering first number as n)
+d. Find the factorial of second number.
+(Write a separate function for each of the above operations.)
+HTML FILE
+<html>
+<head>
+<title>Assignment 3 Q1</title>
+</head>
+<body>
+<form action="slip10.php" value="GET">
+Enter Two Numbers<br>
+<input type="text" name="n1"><br><br>
+<input type="text" name="n2"><br><br>
+Select An Operation<br>
+<input type="radio" name="op" value="mod">Mod Of The Two Numbers<br><br>
+<input type="radio" name="op" value="power">Power Of The First Number Raised
+To The Second<br><br>
+<input type="radio" name="op" value="sum">The Sum Of First n Numbers<br><br>
+<input type="radio" name="op" value="fact">Factorial Of The Second
+Number<br><br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
+PHP FILE
+<?php
+$n1=$_GET["n1"];
+$n2=$_GET["n2"];
+$op=$_GET["op"];
+function mod($n1,$n2)
+{
+$n3=0;
+if($n2!=0)
+$n3=$n1%$n2;
+return $n3;
 }
-if(n < 0)
+function power($n1,$n2)
 {
-i = 0;
-while(read(fh, &c, 1) > 0)
-{
-if(c == '\n') i++;
+$n3=1;
+for($i=1;$i<=$n2;$i++)
+$n3=$i*$n1;
+return $n3;
 }
-lseek(fh, 0, SEEK_SET);
-j = 0;
-while(read(fh, &c, 1) > 0)
+function sum($n1)
 {
-if(c == '\n')
-j++;
-if(j == i+n+1)
+$n3=0;
+for($i=1;$i<=$n1;$i++)
+{
+$n3=$n3+$i;
+}
+return $n3;
+}
+function fact($n2)
+{
+$n3=1;
+for($i=1;$i<=$n2;$i++)
+{
+$n3=$n3*$i;
+}
+return $n3;
+}
+switch($op)
+{
+case "mod": $result=mod($n1,$n2);
+echo "Mod of $n1 and $n2 is $result.";
+break;
+case "power":$result=power($n1,$n2);
+echo "$n1 raised to $n2 is $result.";
+break;
+case "sum": $result=sum($n1);
+echo "Sum of first $n1 number is $result.";
+break;
+case "fact":$result=fact($n2);
+echo"Factorial of $n2 is $result.";
 break;
 }
-while(read(fh, &c, 1) > 0)
+?>
+
+
+Slip11: Create a button with different style (Secondary, Primary, Success, Error, Info,
+Warning, Danger) using BootStrap.
+<html>
+<head>
+<link rel=stylesheet href="bootstrap.min.css">
+</head>
+<body>
+<form >
+<input type= button value="primary" class="btn btn-primary">
+<input type= button value="warning" class="btn btn-warning">
+<input type= button value="secondary"class="btn btn-Secondary">
+<input type= button value="success" class="btn btn-success">
+<input type= button value="info" class="btn btn-info">
+<input type= button value="danger" class="btn btn-danger">
+</body>
+</html>
+
+  
+Slip12: Write a PHP script for the following: Design a form to accept two numbers from the
+user. Give options to choose the arithmetic operation (use radio buttons). Display the result
+on the nextform. (Use the concept of function and default parameters. Use ‘include’ construct
+or require statement)
+PHP FILE
+<?php
+$x=$_POST['s1'];
+$y=$_POST['s2'];
+$op=$_POST['op'];
+function add($x=4,$y=2)
 {
-printf("%c", c);
+$result=$x+$y;
+echo"adition is $result";
+}
+function sub($x=4,$y=2)
+{
+$result=$x-$y;
+echo"subtraction is $result";
+}
+switch ($op)
+{
+case"1": add($x,$y);
+break;
+case"2": sub($x,$y);
+break;
+}
+?>
+HTML FILE
+<html>
+<body>
+<form action="slip12in.php"method="POST">
+first number
+<input type=text name=s2><br>
+second number
+<input type=text name=s1><br>
+chose opration from below<br>
+addition
+<input type=radio value="1" name=op> <br>
+subtraction
+<input type=radio value="2"name=op> <br>
+<input type= submit value="submit"><br>
+</body>
+</html>
+PHP FILE
+<?php
+include'slip12.php';
+?>
+
+  
+Slip13: Write a PHP script to create a chess board using CSS on table cells.
+<html>
+<head>
+<head><title>NRC ChessBoard</title>
+<style>
+.clr1
+{
+background-color:black;
+}
+.clr2
+{
+background-color:white;
+}
+table
+{
+width:100%;
+height:100%;
+}
+</style>
+<?php
+echo"<table border=1>";
+for($i=1;$i<=8;$i++)
+{
+echo"<tr>";
+if($i%2==0)
+{
+for($j=1;$j<=8;$j++)
+{
+if($j%2==1)
+echo"<td class=clr2></td>";
+else
+echo"<td class=clr1></td>";
 }
 }
-close(fh);
+else
+{
+for($j=0;$j<8;$j++)
+{
+if($j%2==0)
+echo"<td class=clr1></td>";
+else
+echo"<td class=clr2></td>";
 }
-int main()
+}
+echo "</tr>";
+}
+echo"</table>" ;
+?>
+</html>
+
+  
+Slip14: Create a container add row inside it and add 3 columns inside row using BootStrap.
+<html>
+<head>
+<link rel="stylesheet" href="bootstrap.min.css">
+</head>
+<body>
+<div class=container>
+<div class="row bg-light" >
+<div class="col-4">col1
+</div>
+<div class="col-4">col2
+</div>
+<div class="col-4">col3
+</div>
+</div>
+</div>
+</body>
+</html>
+
+
+Slip15: Design a form to accept string from the user and perform the following operations
+a. To select first 5 words from the string
+b. Convert the given string to lowercase and then to Title case.
+c. Pad the given string with “*” from left and right both the sides.
+d. Remove the leading whitespaces from the given string.
+e. Find the reverse of given string.
+HTML FILE
+<html>
+<body>
+<form action="Slip15.php" method=get>
+Enter a String<input type=text name=t1><br>
+<input type=radio name=op value=1>Select 5 words<br>
+<input type=radio name=op value=2>LowerCase<br>
+<input type=radio name=op value=3>Padding<br>
+<input type=radio name=op value=4>Remove Spaces<br>
+<input type=radio name=op value=5>Reverse<br><br>
+<input type=submit value=submit>
+</form>
+</body>
+</html>
+PHP FILE
+<?php
+$str=$_GET['t1'];
+$ch=$_GET['op'];
+if($ch==1)
 {
-char buff[80], *args[10];
-while(1)
+$ar=explode(" ",$str,6);
+foreach($ar as $a)
+echo "$a<br>";
+}
+else if($ch==2)
 {
-printf ("\n");
-printf("\nmyshell$ ");
-fgets(buff, 80, stdin);
-buff[strlen(buff)-1] = '\0';
-int n = make_toks(buff, args);
-switch (n)
+$str=strtolower($str);
+echo $str;
+$str=ucwords($str);
+echo "<br>$str";
+}
+else if($ch==3)
 {
-case 1: if(strcmp(args[0], "exit") == 0)
-exit(1);
-if (!fork())
-execlp (args [0], args[0], NULL);
+$str=str_pad($str,20,"*",STR_PAD_BOTH);
+echo $str;
+}
+else if($ch==4)
+{
+$str=trim($str);
+echo $str;
+}
+else if($ch==5)
+{
+$str=strrev($str);
+echo $str;
+}
+?>
+
+
+Slip16: Write a PHP script for the following: Design a form to accept the marks of 5
+different subjects of a student, having serial number, subject name & marks out of 100.
+Display theresult in the tabular format which will have total, percentage and grade. Use only
+3 text boxes.(Use array of form parameters)
+HTML FILE
+<html>
+<head>
+<title> marksheet </title>
+</head>
+<body>
+<form name = "string" action = "slip16.php" method = "get">
+student id <input type = "text" name = "v1"/></br></br>
+Subject name<input type = "text" name = "v2"/></br></br>
+subject marks<input type = "text" name = "v3"/></br></br>
+<button type = "submit"> display marklist </button>
+</form>
+</body>
+</html>
+PHP FILE
+<?php
+$a =$_GET['v1'];
+$b =$_GET['v2'];
+$c =$_GET['v3'];
+$sum=0;
+echo "<h1> <center>Marksheet</center></h1>";
+echo "<h3><center>student id:$a</h3><br>";
+$d =explode(",",$b);
+$e =explode(",",$c);
+echo "<center><table border=2 width=50%>";
+for($i=0;$i<=4;$i++)
+{
+echo "<tr>
+<td>$d[$i]</td>
+<td>$e[$i]</td>
+</tr>";
+$sum=$e[$i]+$sum;
+}
+$result=$sum/5;
+echo "<tr><td>Total marks </td><td>$sum</td>";
+echo"<tr><td>Percentage</td><td>$result</td></tr>";
+echo "</center>"
+?>
+
+
+Slip17: Write a PHP script to sort the following associative array :
+array(“Sagar"=>"31","Vicky"=>"41","Leena"=>"39","Ramesh"=>"40") in
+a) ascending order sort by Value
+b) ascending order sort by Key
+c) descending order sorting by Value
+d) descending order sorting by Key
+<?php
+$a = array("Sagar"=>"31","Vicky"=>"41","Leena"=>"39","Ramesh"=>"40");
+echo "sorting in ascending order by value<br>";
+asort($a);
+print_r($a);
+echo "sorting in ascending order by key<br>";
+ksort($a);
+print_r($a);
+echo "sorting in decending order by value<br>";
+arsort($a);
+print_r($a);
+echo "sorting in decending order by key<br>";
+krsort($a);
+print_r($a);
+?>
+
+
+Slip18: Write a menu driven program to perform the following operations on an associative
+array
+a. Reverse the order of each element’s key-value pair.
+b. Traverse the element in an array in random order.
+c. Convert the array elements into individual variables.
+d. Display the elements of an array along with key.
+HTML FILE
+<html>
+<head>
+<title> String operations </title>
+<body>
+<form name = "String" action = "s18_q1.php" method = "get">
+<h2> Select Operations</h2>
+<input type = "radio" name ="s" value=1>Reverse the order</br></br>
+<input type = "radio" name ="s" value=2>Traverse the element</br></br>
+<input type = "radio" name ="s" value=3>Convert the array elements</br></br>
+<input type = "radio" name ="s" value=4>Display the elements of an array along with
+key.</br></br>
+<input type=submit value=send>
+</body>
+</html>
+PHP FILE
+<?php
+$a = array("a"=>1,"b"=>21,"c"=> 56);
+switch($_GET['s'])
+{
+case 1:
+echo "Orginal Array is <br>";
+print_r($a);
+echo "reverse Array is <br>";
+$c =array_reverse($a);
+print_r($c);
 break;
 case 2:
-if (!fork ())
-execlp (args [0], args[0], args[1], NULL);
+echo "Orginal Array is <br>";
+print_r($a);
+echo "traversing Array is <br>";
+foreach($a as $v)
+echo "$v<br>";
 break;
-case 3: if (strcmp(args[0], "typeline") == 0)
-typeline (args[1], args[2]);
-else
-{
-if (!fork ())
-execlp (args [0], args[0], args[1], args[2], NULL);
-}
+case 3:
+echo " Original array is<br>";
+print_r($a);
+echo "elements into individual variables<br>";
+$e = extract($a);
+print_r($e);
 break;
 case 4:
-if (!fork ())
-execlp (args [0], args [0], args [1], args [2], args [3], NULL);
+echo " Original array is<br>";
+print_r($a);
+echo "key value pair is<br>";
+foreach ($a as $k=>$v)
+{
+print_r("$k=>$v");
+echo"<br>";
+}
+break;
+default:
+echo "Invalid choice!!";
+}
+?>
+
+  
+Slip19: Write a PHP script to accept 2 strings from the user, the first string should be a
+sentence andsecond can be a word.
+a. Delete a small part from first string after accepting position and number of
+characters toremove.
+b. Insert the given small string in the given big string at specified position without
+removingany characters from the big string.
+c. Replace some characters/ words from given big string with the given small string at
+specified position.
+HTML FILE
+<html>
+<form action=slip19.php method=get>
+Enter a Sentence<input type=text name=t1><br>
+Enter a word<input type=text name=t2><br>
+Enter position<input type=text name=t3><br>
+Enter number of characters to remove<input type=text name=t4><br>
+<input type=submit value="Display Result">
+</form>
+</html>
+PHP FILE
+<?php
+$st=$_GET['t1'];
+$wd=$_GET['t2'];
+$ps=$_GET['t3'];
+$nr=$_GET['t4'];
+$dup_st=$st;
+$str=substr_replace($st,"",$ps,$nr);
+echo "<br>$str<br>";
+$str=substr_replace($st,$wd,$ps,0);
+echo "<br>$str<br>";
+$str=substr_replace($st,$wd,$ps,strlen($wd));
+echo "<br>$str<br>";
+?>
+
+
+Slip20: Write a menu driven program to perform the following operations on associative
+arrays:
+a) Split an array into chunks
+b) Sort the array by values without changing the keys.
+c) Filter the even elements from an array.
+HTML FILE
+<html>
+<body>
+<form action="slip20.php" method="GET">
+Enter Your Choice:<br>
+<input type="radio" name="ch" value=1> Split an array into chunks<br>
+<input type="radio" name="ch" value=2> Sort array by values without changing key
+values <br>
+<input type="radio" name="ch" value=3> Filter even elements from array <br>
+<input type="submit" value="Submit">
+</form>
+</body>
+</html>
+PHP FILE
+<?php
+$choice=$_GET['ch'];
+$arr=array('a'=>1,'b'=>20,'c'=>13,'d'=>5,'e'=>18,'f'=>12,'g'=>7,'h'=>8,'i'=>15,'j'=>10);
+switch($choice)
+{
+case 1:
+print_r(array_chunk($arr,2));
+break;
+case 2:
+asort($arr);
+echo "Array in ascending order:<br>";
+print_r($arr);
+break;
+case 3:
+function even($var)
+{
+return $var%2==0?1:0;
+}
+$br=array_filter($arr,"even");
+print_r($br);
 break;
 }
-}
-return 0;
-}
+?>
 
 
-Slip2_1/Slip9_1/Slip10_1
-: Write the simulation program for demand paging and show the page
-scheduling and total number of page faults according the FIFO page replacement algorithm.
-Assume the memory of n frames.
-Reference String : 3, 4, 5, 6, 3, 4, 7, 3, 4, 5, 6, 7, 2, 4, 6
+Slip21: Create an array of 15 high temperatures, approximating the weather for a spring
+month, then find the average high temp, the five warmest high temps Display the result on the
+browser
+<?php
+$temp_array=range(31,45);
+$tot_temp = 0;
+$count = count($temp_array);
+echo "Total temp values are: ".$count;
+foreach($temp_array as $temp)
+{
+$tot_temp += $temp;
+}
+$avg_high_temp = $tot_temp/$count;
+echo "<br> Average Temperature is : ".$avg_high_temp."
+";
+sort($temp_array);
+echo " <br> List of five lowest temperatures :";
+$res1= array_slice($temp_array,0,5);
+foreach($res1 as $high_temp)
+{
+echo "<br> $high_temp";
+}
+echo "<br> List of five highest temperatures :";
+$res1= array_slice($temp_array,10);
+foreach($res1 as $high_temp)
+{
+echo "<br> $high_temp";
+}
+?>
 
 
-
-#include<stdio.h>
-int frame[5][2],nf;
-int searchFrames(int sv)
+Slip22: Write a menu driven program to perform the following queue related operations
+a) Insert an element in queue
+b) Delete an element from queue
+c) Display the contents of queue
+HTMl FILE
+<html>
+<body>
+<form method=get action="slip 23.php">
+<input type=radio name=ch value=1> Insert in queue<br>
+Enter No to insert<input type=text name=n1><br>
+<input type=radio name=ch value=2> Delete in queue<br>
+<input type=radio name=ch value=3> Display<br>
+<input type=submit>
+</form>
+</body>
+</html>
+PHP FILE
+<?php
+$stk=array(1,2,3,4,5);
+$ch=$_GET['ch'];
+else if($ch==1)
 {
-int x;
-for(x=0;x<nf;x++)
+echo "Insert element in queue <br>";
+$n4=$_GET['n4'];
+array_push($stk,$n4);//Insert element at last
+print_r($stk);
+}
+else if($ch==2)
 {
-if(sv==frame[x][0])
+echo "Delete element from queue. <br>";
+$res=array_shift($stk); //at begining
+echo "Deleted element is:".$res;
+}
+else if($ch ==3)
 {
-return 0;
+echo"Given array is: <br>";
+print_r($stk);
 }
-}
-return 1;
-}
-void displayMemory()
-{
-int i;
-printf("\n\nFrame Contains |");
-for(i=0;i<nf;i++)
-printf(" %d | ",frame[i][0]);
-}
-int findFreeFrame()
-{
-int i,min=frame[0][1],ri=0;
-for(i=0;i<nf;i++)
-{
-if(frame[i][1]==-1)
-{
-return i;
-}
-}
-//LRU
-for(i=0;i<nf;i++)
-{
-if(min>frame[i][1])
-{
-min=frame[i][1];
-ri=i;
-}
-}
-return ri;
-}
-main()
-{
-int rs[]={3, 4, 5, 6, 3, 4, 7, 3, 4, 5, 6, 7, 2, 4, 6};
-int ts=0;
-int n=15,i,j,pf=0,srch,insert_index;
-printf("Enter how many frames");
-scanf("%d",&nf);
-for(i=0;i<nf;i++)
-{
-for(j=0;j<2;j++)
-frame[i][j]=-1;
-}
-displayMemory();
-for(i=0;i<n;i++)
-{
-srch=searchFrames(rs[i]);
-if(srch==1)
-{
-pf++;
-insert_index=findFreeFrame();
-frame[insert_index][0]=rs[i];
-frame[insert_index][1]=ts++;
-}
-displayMemory();
-}
-printf("\n\nTotal Page Faults Occured is %d\n",pf);
-}
+?>
 
 
-Slip2_2/Slip10_2/Slip11_2/Slip12_2/Slip15_1/Slip19_1: Write a program to implement the
-shell. It should display the command prompt “myshell$”. Tokenize the command line and
-execute the given command by creating the child process. Additionally it should interpret the
-following ‘list’ commands as
-myshell$ list f dirname:- To print names of all the files in current directory.
-myshell$ list n dirname :- To print the number of all entries in the current directory
+Slip23: Write a menu driven program to perform the following stack related operations:
+a) Insert an element in stack
+b) Delete an element from stack
+c) Display the contents of stack
+HTML FILE
+<html>
+<body>
+<form method=get action="slip23.php">
+<input type=radio name=ch value=1> Insert in stack<br>
+Enter No to insert<input type=text name=n1><br>
+<input type=radio name=ch value=2> Delete in stack<br>
+<input type=radio name=ch value=3> Display<br>
+<input type=submit>
+</form>
+</body>
+</html>
+PHP FILE
+<?php
+$stk=array(1,2,3,4,5);
+$ch=$_GET['ch'];
+if($ch==1)
+{
+echo "Insert element in stack <br>";
+$n1=$_GET['n1'];
+array_push($stk,$n1); //at end
+print_r($stk);
+}
+else if($ch==2)
+{
+echo "Delete element in stack <br>";
+array_pop($stk);
+print_r($stk);
+}
+else if($ch == 3)
+{
+echo"Given array is: <br>";
+print_r($stk);
+}
+?>
 
 
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-#include <dirent.h>
-#include <unistd.h>
-void make_toks(char *s, char *tok[])
+Slip24: Write a PHP program to read two file names from user and append content of first
+file intosecond file.
+HTML FILE
+<html lang="en">
+<head>
+<title>NRC File Handling</title>
+</head>
+<body>
+<form action="slip24.php" method="get">
+Enter File name to read <input type="text" name="fname1">
+Enter File name to write <input type="text" name="fname2">
+<input type="submit" value="Copy">
+</form>
+</body>
+</html>
+PHP FILE (create 2 text file pf your choice name and use same)
+<?php
+$fname1=$_GET['fname1'];
+$fname2=$_GET['fname2'];
+$fp1=fopen($fname1,"r");
+$fp2=fopen($fname2,"a");
+$size=filesize($fname1);
+$str=fread($fp1,$size);
+fwrite($fp2,$str,$size);
+echo "Append Successfull";
+?>
+
+
+Slip25: Write a menu driven program to perform various file operations. Accept
+filename from user.
+a) Display type of file.
+b) Display last modification time of file
+c) Display the size of file
+d) Delete the file
+HTML FILE
+<html lang="en">
+<head>
+<title>Document</title>
+</head>
+<body>
+<form action="slip25.php" method="get">
+Enter File name to read <input type="text" name="fname1"><br>
+<input type="radio" name="op" value="1">Display Type of File<br>
+<input type="radio" name="op" value="2">Display Modification Time<br>
+<input type="radio" name="op" value="3">Display File Size<br>
+<input type="radio" name="op" value="4">Delete File<br>
+<input type="submit" value="Copy">
+</form>
+</body>
+</html>
+PHP FILE
+<?php
+$fp=$_GET['fname1'];
+$op=$_GET['op'];
+switch($op)
 {
-int i=0;
-char *p;
-p = strtok(s," ");
-while(p!=NULL)
-{ tok[i++]=p;
-p=strtok(NULL," ");
-}
-tok[i]=NULL;
-}
-void list(char *dn, char op)
-{
-DIR *dp;
-struct dirent *entry;
-int dc=0,fc=0;
-dp = opendir(dn);
-if(dp==NULL)
-{
-printf("Dir %s not found.\n",dn);
-return;
-}
-switch(op)
-{
-case 'f':
-while(entry=readdir(dp))
-{
-if(entry->d_type==DT_REG)
-printf("%s\n",entry->d_name);
-} break;
-case 'n':
-while(entry=readdir(dp))
-{
-if(entry->d_type==DT_DIR) dc++;
-if(entry->d_type==DT_REG) fc++;
-}
-printf("%d Dir(s)\t%d File(s)\n",dc,fc);
+case 1:
+echo basename($fp);
 break;
-case 'i':
-while(entry=readdir(dp))
-{
-if(entry->d_type==DT_REG)
-printf("%s\t%lu\n",entry->d_name,entry->d_fileno);
-}
-}
-closedir(dp);
-}
-int main() {
-char buff[80],*args[10];
-int pid;
-while(1)
-{
-printf("myshell$");
-fflush(stdin);
-fgets(buff,80,stdin);
-buff[strlen(buff)-1]='\0';
-make_toks(buff,args);
-if(strcmp(args[0],"list")==0)
-list(args[2],args[1][0]);
-else
-{
-pid = fork();
-if(pid>0)
-wait();
-else
-{
-if(execvp(args[0],args)==-1)
-printf("Bad command.\n");
-}
-}
-}
-return 0;
-}
-
-
-Slip3_1/Slip8_1/Slip12_1/Slip18_1:Write the simulation program to implement demand paging
-and show the page scheduling and total number of page faults according to the LRU (using
-counter method) page replacement algorithm. Assume the memory of n frames.
-Reference String : 3,5,7,2,5,1,2,3,1,3,5,3,1,6,2
-
-
-#include<stdio.h>
-int frame[5][2],nf;
-int searchFrames(int sv)
-{
-int x;
-for(x=0;x<nf;x++)
-{
-if(sv==frame[x][0])
-{
-return x;
-}
-}
-return -2;
-}
-void displayMemory()
-{
-int i;
-printf("\n\nFrame Contains |");
-for(i=0;i<nf;i++)
-printf(" %d | ",frame[i][0]);
-}
-int findFreeFrame()
-{
-int i,min=frame[0][1],ri=0;
-for(i=0;i<nf;i++)
-{
-if(frame[i][1]==-1)
-{
-return i;
-}
-}
-for(i=0;i<nf;i++)
-{
-if(min>frame[i][1])
-{
-min=frame[i][1];
-ri=i;
-}
-}
-return ri;
-}
-main()
-{
-int rs[]={3,5,7,2,5,1,2,3,1,3,5,3,1,6,2};
-int ts=0;
-int n=15,i,j,pf=0,srch,insert_index;
-printf("Enter how many frames");
-scanf("%d",&nf);
-for(i=0;i<nf;i++)
-{
-for(j=0;j<2;j++)
-frame[i][j]=-1;
-}
-displayMemory();
-for(i=0;i<n;i++)
-{
-srch=searchFrames(rs[i]);
-if(srch==-2)
-{
-pf++;
-insert_index=findFreeFrame();
-frame[insert_index][0]=rs[i];
-frame[insert_index][1]=ts++;
-}
-else
-{
-frame[srch][1]=ts++;
-}
-displayMemory();
-}
-printf("\n\nTotal Page Faults Occured is %d\n",pf);
-}
-
-
-
-Slip 3_2/Slip16_1/Slip24_2 :Write a programto implement the toy shell. It should display the
-command prompt “myshell$”. Tokenize the command line and execute the given command by
-creating the child process. Additionally it should interpret the following commands.
-count c filename :- To print number of characters in the file.
-count w filename :- To print number of words in the file.
-count l filename :- To print number of lines in the file.
-
-
-#include <sys/types.h>
-#include<unistd.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-void make_toks(char *s, char *tok[])
-{
-int i=0;
-char *p;
-p = strtok(s," ");
-while(p!=NULL)
-{ tok[i++]=p;
-p=strtok(NULL," ");
-}
-tok[i]=NULL;
-}
-void count(char *fn, char op)
-{ int fh,cc=0,wc=0,lc=0;
-char c;
-fh = open(fn,O_RDONLY);
-if(fh==-1) {
-printf("File %s not found.\n",fn);
-return;
-}
-while(read(fh,&c,1)>0)
-{ if(c==' ')
-wc++;
-else if(c=='\n')
-{
-wc++;
-lc++;
-} cc++;
-} close(fh);
-switch(op)
-{
-case 'c':
-printf("No.of characters:%d\n",cc-1);
+case 2: $mtime=stat($fp);
+echo Date("d/M/Y h:m:s",$mtime['mtime']);
 break;
-case 'w':
-printf("No.of words:%d\n",wc);
+case 3:echo filesize($fp);
 break;
-case 'l':
-printf("No.of lines:%d\n",lc+1);
+case 4:unlink($fp);
+echo "File deleted";
 break;
 }
-} int main()
+?>
+
+
+Slip 26: Consider the following entities and their relationship.
+Doctor ( doc_no, dname, address ,city ,area)
+Hospital (hosp_no, hname, hcity)
+Doctor-Hospital related with many-one
+relationship. Create a RDB in 3NF for above and
+solve the following.
+Using above database write a script in PHP to print the Doctor visiting to the Hospital in
+tabularformat. Accept Hospital name from user.
+(Use your database)
+Solution
+Html file
+<html>
+<form action=slip26.php method=get>
+Enter Hospital Name<input type=text name=t1><br>
+<input type=submit value="Display Doctors">
+</form>
+</html>
+PHP File
+<?php
+$con=pg_connect("host=localhost user=postgres password=nrc dbname=slip26");
+$cn=$_GET['t1'];
+$rs=pg_query($con,"select * from doctor,hospital where hname='$cn' and hsno=hno");
+while($row=pg_fetch_array($rs))
 {
-char buff[80],*args[10];
-int pid;
-while(1) { printf("myshell$ ");
-fflush(stdin);
-fgets(buff,80,stdin);
-buff[strlen(buff)-1]='\0';
-make_toks(buff,args);
-if(strcmp(args[0],"count")==0)
-count(args[2],args[1][0]);
+echo "Id:$row[0] Name:$row[1] Address:$row[2] City:$row[3]
+Pin:$row[4]<br>";
+}
+?>
+
+
+Slip27: Write a PHP program to read two file names from user and copy the content of first
+file into second file.
+HTML FILE
+<html lang="en">
+<head>
+<title>NRC File Handling</title>
+</head>
+<body>
+<form action="slip27.php" method="get">
+Enter File name to read <input type="text" name="fname1">
+Enter File name to write <input type="text" name="fname2">
+<input type="submit" value="Copy">
+</form>
+</body>
+</html>
+PHP FILE
+<?php
+$fname1=$_GET['fname1'];
+$fname2=$_GET['fname2'];
+$fp1=fopen($fname1,"r");
+$fp2=fopen($fname2,"w");
+$size=filesize($fname1);
+$str=fread($fp1,$size);
+fwrite($fp2,$str,$size);
+echo "Append Successfull";
+?>
+
+
+Slip28: Write a program to read a flat file “student.dat”, calculate the percentage and
+display the data from file in tabular format.(Student.dat file contains rollno, name, OS, WT,
+DS, Python, Java, CN )
+Student.dat file
+rollno name OS WT DS Python Java CN
+1 Abd 30 30 25 23 20 45
+2 xyz 32 33 24 25 25 45
+PHP FILE
+<?php
+$fp=fopen("student.dat","r");
+$ar=fscanf($fp,"%s%s%s%s%s%s%s%s",$rl,$nm,$os,$wt,$ds,$py,$jv,$cn);
+echo "<table
+border=1><tr><th>$rl</th><th>$nm</th><th>$os</th><th>$wt</th><th>$ds</th><t
+h>$py</th><th>$jv</th><th>$cn</th><th>Percentage</tr>";
+while(($ar=fscanf($fp,"%s%s%d%d%d%d%d%d",$rl,$nm,$os,$wt,$ds,$py,$jv,$cn))!=f
+alse)
+{
+$total=$os+$wt+$ds+$py+$jv+$cn;
+$per=$total/6;
+echo
+"<tr><th>$rl</th><th>$nm</th><th>$os</th><th>$wt</th><th>$ds</th><th>$py</t
+h><th>$jv</th><th>$cn</th><td>$per</td></tr>";
+}
+echo "</table>";
+?>
+
+
+Slip29:
+Consider the following entities and their relationships
+Event (eno , title , date )
+Committee ( cno , name, head , from_time ,to_time , status)
+Event and Committee have many to many relationship. Write a php script to accept title of
+eventand modify status committee as working
+HTML File
+<html>
+<form action=slip29.php method=get>
+Enter Event Name:<input type=text name=t1><br>
+<input type=submit value="Change Status">
+</form>
+</html>
+PHP File
+<?php
+$con=pg_connect("host=localhost user=postgres password=nrc bname=practicals22");
+//echo $con;
+$en=$_GET['t1'];
+$ws='Working';
+$x=pg_query($con,"update comm_mem set cstatus='$ws' from event_comm,event
+where comm_mem.cno=event_comm.cno and event_comm.eno=event.eno and
+etitle='$en'");
+if($x>0)
+echo "Working status updated";
 else
-{ pid = fork();
-if(pid>0)
-wait();
-else
-{
-if(execvp(args[0],args)==-1)
-printf("Bad command.\n");
-}
-}
-}
-return 0;
-}
+echo "Status not updated";
+?>
 
 
-
-Slip4_1: Write the simulation program for demand paging and show the page scheduling and
-total number of page faults according the MFU page replacement algorithm. Assume the
-memory of n frames.
-Reference String : 8, 5, 7, 8, 5, 7, 2, 3, 7, 3, 5, 9, 4, 6, 2
-
-
-
-#include<stdio.h>
-#define MAX 20
-int frames[MAX],ref[MAX],mem[MAX][MAX],faults,
-sp,m,n,count[MAX];
-void accept()
-{
-int i;
-printf("Enter no.of frames:");
-scanf("%d", &n);
-printf("Enter no.of references:");
-scanf("%d", &m);
-printf("Enter reference string:\n");
-for(i=0;i<m;i++)
-{
-printf("[%d]=",i);
-scanf("%d",&ref[i]);
-}
-}
-void disp()
-{
-int i,j;
-for(i=0;i<m;i++)
-printf("%3d",ref[i]);
-printf("\n\n");
-for(i=0;i<n;i++)
-{
-for(j=0;j<m;j++)
-{
-if(mem[i][j])
-printf("%3d",mem[i][j]);
-else
-printf(" ");
-}
-printf("\n");
-}
-printf("Total Page Faults: %d\n",faults);
-}
-int search(int pno)
-{
-int i;
-for(i=0;i<n;i++)
-{
-if(frames[i]==pno)
-return i;
-}
-return -1;
-}
-int get_mfu(int sp)
-{
-int i,max_i,max=-9999;
-i=sp;
-do
-{
-if(count[i]>max)
-{
-max = count[i];
-max_i = i;
-}
-i=(i+1)%n;
-}while(i!=sp);
-return max_i;
-}
-void mfu()
-{
-int i,j,k;
-for(i=0;i<m && sp<n;i++)
-{
-k=search(ref[i]);
-if(k==-1)
-{
-frames[sp]=ref[i];
-count[sp]++;
-faults++;
-sp++;
-for(j=0;j<n;j++)
-mem[j][i]=frames[j];
-}
-else
-count[k]++;
-}
-sp=0;
-for(;i<m;i++)
-{
-k = search(ref[i]);
-if(k==-1)
-{
-sp = get_mfu(sp);
-frames[sp] = ref[i];
-count[sp]=1;
-faults++;
-sp = (sp+1)%n;
-for(j=0;j<n;j++)
-mem[j][i] = frames[j];
-}
-else
-count[k]++;
-}
-}
-int main()
-{
-accept();
-mfu();
-disp();
-return 0;
-}
-
-
-
-Slip5_1/ Slip7_1 / Slip17_1 / Slip23_2(you just need to change the reference string): Write
-the simulation program for demand paging and show the page scheduling and total number
-of page faults according the optimal page replacement algorithm. Assume the memory of n
-frames.
-Reference String : 8, 5, 7, 8, 5, 7, 2, 3, 7, 3, 5, 9, 4, 6, 2
-
-
-
-#include<stdio.h>
-int main()
-{
-int no_of_frames, no_of_pages, frames[10], pages[30], temp[10], flag1,
-flag2, flag3, i, j, k, pos, max, faults = 0;
-printf("Enter number of frames: ");
-scanf("%d", &no_of_frames);
-printf("Enter number of pages: ");
-scanf("%d", &no_of_pages);
-printf("Enter page reference string: ");
-for(i = 0; i < no_of_pages; ++i){
-scanf("%d", &pages[i]);
-}
-for(i = 0; i < no_of_frames; ++i){
-frames[i] = -1;
-}
-for(i = 0; i < no_of_pages; ++i){
-flag1 = flag2 = 0;
-for(j = 0; j < no_of_frames; ++j){
-if(frames[j] == pages[i]){
-flag1 = flag2 = 1;
-break;
-}
-}
-if(flag1 == 0){
-for(j = 0; j < no_of_frames; ++j){
-if(frames[j] == -1){
-faults++;
-frames[j] = pages[i];
-flag2 = 1;
-break;
-}
-}
-}
-if(flag2 == 0){
-flag3 =0;
-for(j = 0; j < no_of_frames; ++j){
-temp[j] = -1;
-for(k = i + 1; k < no_of_pages; ++k){
-if(frames[j] == pages[k]){
-temp[j] = k;
-break;
-}
-}
-}
-for(j = 0; j < no_of_frames; ++j){
-if(temp[j] == -1){
-pos = j;
-flag3 = 1;
-break;
-}
-}
-if(flag3 ==0){
-max = temp[0];
-pos = 0;
-for(j = 1; j < no_of_frames; ++j){
-if(temp[j] > max){
-max = temp[j];
-pos = j;
-}
-}
-}
-frames[pos] = pages[i];
-faults++;
-}
-printf("\n");
-for(j = 0; j < no_of_frames; ++j){
-printf("%d\t", frames[j]);
-}
-}
-printf("\n\nTotal Page Faults = %d", faults);
-return 0;
-}
-
-
-
-
-
-Slip 6_1: Write the simulation program for demand paging and show the page scheduling
-and total number of page faults according the MRU page replacement algorithm. Assume
-the memory of n frames.
-Reference String : 8, 5, 7, 8, 5, 7, 2, 3, 7, 3, 5, 9, 4, 6, 2
-
-
-
-
-#include<stdio.h>
-int frame[5][2],nf;
-int searchFrames(int sv)
-{
-int x;
-for(x=0;x<nf;x++)
-{
-if(sv==frame[x][0])
-{
-return x;
-}
-}
-return -2;
-}
-void displayMemory()
-{
-int i;
-printf("\n\nFrame Contains |");
-for(i=0;i<nf;i++)
-printf(" %d | ",frame[i][0]);
-}
-int findFreeFrame()
-{
-int i,max=frame[0][1],ri=0;
-for(i=0;i<nf;i++)
-{
-if(frame[i][1]==-1)
-{
-return i;
-}
-}
-for(i=0;i<nf;i++)
-{
-if(max<frame[i][1])
-{
-max=frame[i][1];
-ri=i;
-}
-}
-return ri;
-}
-main()
-{
-int rs[]={12,15,12,18,6,8,11,12,19,12,6,8,12,15,19,8};
-int ts=0;
-int n=16,i,j,pf=0,srch,insert_index;
-printf("Enter how many frames");
-scanf("%d",&nf);
-for(i=0;i<nf;i++)
-{
-for(j=0;j<2;j++)
-frame[i][j]=-1;
-}
-displayMemory();
-for(i=0;i<n;i++)
-{
-srch=searchFrames(rs[i]);
-if(srch==-2)
-{
-pf++;
-insert_index=findFreeFrame();
-frame[insert_index][0]=rs[i];
-frame[insert_index][1]=ts++;
-}
-else
-{
-frame[srch][1]=ts++;
-}
-displayMemory();
-}
-printf("\n\nTotal Page Faults Occured is %d\n",pf);
-}
-
-
-
-
-Slip13_2/Slip19_2: Write the simulation program for Round Robin scheduling for given time
-quantum. The arrival time and first CPU-burst of different jobs should be input to the system.
-Accept no. of Processes, arrival time and burst time. The output should give the Gantt chart,
-turnaround time and waiting time for each process. Also display the average turnaround time
-and average waiting time.
-
-
-
-#include<stdio.h>
-#include<stdlib.h>
-#include<string.h>
-typedef struct process_info
-{
-char pname[20];
-int at,bt,ct,bt1;
-struct process_info *next;
-}NODE;
-int n,ts;
-NODE *first,*last;
-void accept_info()
-{
-NODE *p;
-int i;
-printf("Enter no.of process:");
-scanf("%d",&n);
-for(i=0;i<n;i++)
-{
-p = (NODE*)malloc(sizeof(NODE));
-printf("Enter process name:");
-scanf("%s",p->pname);
-printf("Enter arrival time:");
-scanf("%d",&p->at);
-printf("Enter first CPU burst time:");
-scanf("%d",&p->bt);
-p->bt1 = p->bt;
-p->next = NULL;
-if(first==NULL)
-first=p;
-else
-last->next=p;
-last = p;
-}
-printf("Enter time slice:");
-scanf("%d",&ts);
-}
-void print_output()
-{
-NODE *p;
-float avg_tat=0,avg_wt=0;
-printf("pname\tat\tbt\tct\ttat\twt\n");
-p = first;
-while(p!=NULL)
-{
-int tat = p->ct-p->at;
-int wt = tat-p->bt;
-avg_tat+=tat;
-avg_wt+=wt;
-printf("%s\t%d\t%d\t%d\t%d\t%d\n",
-p->pname,p->at,p->bt,p->ct,tat,wt);
-p=p->next;
-}
-printf("Avg TAT=%f\tAvg WT=%f\n",
-avg_tat/n,avg_wt/n);
-}
-void print_input()
-{
-NODE *p;
-p = first;
-printf("pname\tat\tbt\n");
-while(p!=NULL)
-{
-printf("%s\t%d\t%d\n",
-p->pname,p->at,p->bt1);
-p = p->next;
-}
-}
-void sort()
-{
-NODE *p,*q;
-int t;
-char name[20];
-p = first;
-while(p->next!=NULL)
-{
-q=p->next;
-while(q!=NULL)
-{
-if(p->at > q->at)
-{
-strcpy(name,p->pname);
-strcpy(p->pname,q->pname);
-strcpy(q->pname,name);
-t = p->at;
-p->at = q->at;
-q->at = t;
-t = p->bt;
-p->bt = q->bt;
-q->bt = t;
-t = p->ct;
-p->ct = q->ct;
-q->ct = t;
-t = p->bt1;
-p->bt1 = q->bt1;
-q->bt1 = t;
-}
-q=q->next;
-}
-p=p->next;
-}
-}
-int time;
-int is_arrived()
-{
-NODE *p;
-p = first;
-while(p!=NULL)
-{
-if(p->at<=time && p->bt1!=0)
-return 1;
-p=p->next;
-}
-return 0;
-}
-NODE * delq()
-{
-NODE *t;
-t = first;
-first = first->next;
-t->next=NULL;
-return t;
-}
-void addq(NODE *t)
-{
-last->next = t;
-last = t;
-}
-struct gantt_chart
-{
-int start;
-char pname[30];
-int end;
-}s[100],s1[100];
-int k;
-void rr()
-{
-int prev=0,n1=0;
-NODE *p;
-while(n1!=n)
-{
-if(!is_arrived())
-{
-time++;
-s[k].start = prev;
-strcpy(s[k].pname,"*");
-s[k].end = time;
-k++;
-prev=time;
-}
-else
-{
-p = first;
-while(1)
-{
-if(p->at<=time && p->bt1!=0)
-break;
-p = delq();
-addq(p);
-p = first;
-}
-if(p->bt1<=ts)
-{
-time+=p->bt1;
-p->bt1=0;
-}
-else
-{
-time+=ts;
-p->bt1-=ts;
-}
-p->ct = time;
-s[k].start = prev;
-strcpy(s[k].pname,p->pname);
-s[k].end = time;
-k++;
-prev = time;
-if(p->bt1==0) n1++;
-p = delq();
-addq(p);
-}
-print_input();
-}
-}
-void print_gantt_chart()
-{
-int i,j,m;
-s1[0] = s[0];
-for(i=1,j=0;i<k;i++)
-{
-if(strcmp(s[i].pname,s1[j].pname)==0)
-s1[j].end = s[i].end;
-else
-s1[++j] = s[i];
-}
-printf("%d",s1[0].start);
-for(i=0;i<=j;i++)
-{
-m = (s1[i].end - s1[i].start);
-for(k=0;k<m/2;k++)
-printf("-");
-printf("%s",s1[i].pname);
-for(k=0;k<(m+1)/2;k++)
-printf("-");
-printf("%d",s1[i].end);
-}
-}
-int main()
-{
-accept_info();
-sort();
-rr();
-print_output();
-print_gantt_chart();
-return 0;
-}
-
-
-
-Slip14_2/Slip15_2/Slip20_2: Write a C program to simulate Non-preemptive Shortest Job First
-(SJF) – scheduling. The arrival time and first CPU-burst of different jobs should be input to the
-system. Accept no. of Processes, arrival time and burst time. The output should give Gantt chart,
-turnaround time and waiting time for each process. Also find the average waiting time and
-turnaround time
-
-
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
-typedef struct PROCESS
-{
-char name[80] ;
-int at , bt , ct , tat , tbt , wt ;
-}PROCESS ;
-PROCESS jobs[10] ;
-int processCount , totalTat=0 , totalWt = 0 ;
-float avgTat , avgWt ;
-void sort()
-{
-int i , j ;
-PROCESS p ;
-for(i = 0 ; i<processCount ; i++)
-{
-for(j=0 ; j<processCount ; j++)
-{
-if(jobs[i].at < jobs[j].at)
-{
-p = jobs[i] ;
-jobs[i] = jobs[j] ;
-jobs[j] = p ;
-}
-}
-}
-}
-int getJob(int time)
-{
-int i , job , min = 999 ;
-for(i=0 ; i<processCount ; i++)
-{
-if(jobs[i].at<=time && jobs[i].tbt!=0)
-{
-if(jobs[i].tbt < min)
-{
-min = jobs[i].tbt ;
-job = i ;
-}
-}
-}
-return job ;
-}
-void getProcess()
-{
-int i ;
-printf("\nEnter the number of processes: ") ;
-scanf("%d",&processCount) ;
-for(i=0 ; i<processCount ; i++)
-{
-printf("\nEnter the process name: ") ;
-scanf("%s",jobs[i].name) ;
-printf("Enter the CPU Burst time: ") ;
-scanf("%d",&jobs[i].bt) ;
-printf("Enter the Arrival time: ") ;
-scanf("%d",&jobs[i].at) ;
-jobs[i].tbt = jobs[i].bt ;
-}
-sort() ;
-}
-void process()
-{
-int job , count = 0 ,time = 0 ;
-char currentJob[10] , prevJob[10] = "NULL" ;
-printf("\n\n GanttChart:\n") ;
-printf("_________________________________________________\n") ;
-while(1)
-{
-job = getJob(time) ;
-jobs[job].tbt-- ;
-strcpy(currentJob,jobs[job].name) ;
-if(strcmp(currentJob,prevJob) !=0 )
-{
-printf("%d|%d %s ",time , time , currentJob) ;
-}
-time++ ;
-if(jobs[job].tbt==0)
-{
-jobs[job].ct = time ;
-jobs[job].tat = time - jobs[job].at ;
-jobs[job].wt = jobs[job].tat-jobs[job].bt ;
-count++ ;
-totalTat += jobs[job].tat ;
-totalWt+=jobs[job].wt ;
-}
-strcpy(prevJob , currentJob) ;
-if(count==processCount)
-break ;
-}
-printf("%d|",time) ;
-printf("\n_________________________________________________\n") ;
-avgTat = (float)totalTat/processCount ;
-avgWt = (float)totalWt/processCount ;
-}
-void display()
-{
-int i = 0 ;
-printf("\n\n--------------------------------------------------------------
--------------------------------------\n") ;
-printf("Process name\tArrival Time\tBurst Time\tCPU Time\tTurn Around
-time\tWait Time\n");
-printf("------------------------------------------------------------------
----------------------------------\n");
-for(i=0 ; i<processCount ; i++)
-printf(" %s \t %d \t %d \t %d \t %d
-\t %d \n",jobs[i].name , jobs[i].at , jobs[i].bt , jobs[i].ct ,
-jobs[i].tat , jobs[i].wt );
-printf("------------------------------------------------------------------
----------------------------------") ;
-printf("\n\nTotal Turn Around Time: %d",totalTat) ;
-printf("\nTotal Waiting Time: %d",totalWt) ;
-printf("\n\nAverage Turn Around Time: %f",avgTat) ;
-printf("\nAverage Waiting Time: %f\n",avgWt) ;
-}
-main()
-{
-system("clear");
-getProcess() ;
-process() ;
-display() ;
-}
-
-
-
-Slip16_2 / Slip21_2/Slip 22_2: Write the program to simulate Non preemptive priority
-scheduling. The arrival time and first CPU-burst of different jobs should be input to the system.
-Accept no. of Processes, arrival time and burst time. The output should give Gantt chart,
-turnaround time and waiting time for each process. Also find the average waiting time and
-turnaround time.
-
-
-#include<stdio.h>
-#include<string.h>
-#include<stdlib.h>
-typedef struct PROCESS
-{
-char name[80] ;
-int at , bt , ct , tat , tbt , wt , priority ;
-}PROCESS ;
-PROCESS jobs[10] ;
-int time = 0 , processCount , totalTat=0 , totalWt = 0 ;
-float avgTat , avgWt ;
-void sort()
-{
-int i , j ;
-PROCESS p ;
-for(i = 0 ; i<processCount ; i++)
-{
-for(j=0 ; j<processCount ; j++)
-{
-if(jobs[i].at < jobs[j].at)
-{
-p = jobs[i] ;
-jobs[i] = jobs[j] ;
-jobs[j] = p ;
-}
-}
-}
-}
-int getJob()
-{
-int i , job , min = 999 ;
-for(i=0 ; i<processCount ; i++)
-{
-if(jobs[i].at<=time && jobs[i].tbt!=0)
-{
-if(jobs[i].priority <= min)
-{
-min = jobs[i].tbt ;
-job = i ;
-}
-}
-}
-return job ;
-}
-void getProcess()
-{
-int i ;
-printf("\nEnter the number of processes: ") ;
-scanf("%d",&processCount) ;
-for(i=0 ; i<processCount ; i++)
-{
-printf("\nEnter the process name: ") ;
-scanf("%s",jobs[i].name) ;
-printf("Enter the CPU Burst time: ") ;
-scanf("%d",&jobs[i].bt) ;
-printf("Enter the Arrival time: ") ;
-scanf("%d",&jobs[i].at) ;
-jobs[i].tbt = jobs[i].bt ;
-printf("Enter the process priority: ") ;
-scanf("%d",&jobs[i].priority) ;
-}
-sort() ;
-}
-void process()
-{
-int job , count = 0 ;
-char currentJob[10] , prevJob[10] = "NULL" ;
-printf("\tGantt Chart\n\n") ;
-printf("_________________________________________________\n") ;
-printf("|") ;
-printf("0") ;
-while(1)
-{
-job = getJob() ;
-jobs[job].tbt-- ;
-strcpy(currentJob,jobs[job].name) ;
-if(strcmp(currentJob,prevJob) !=0 )
-{
-printf(" %s %d|%d ",currentJob,time , time) ;
-}
-time++ ;
-if(jobs[job].tbt==0)
-{
-jobs[job].ct = time ;
-jobs[job].tat = jobs[job].ct - jobs[job].at ;
-jobs[job].wt = jobs[job].tat-jobs[job].bt ;
-count++ ;
-totalTat += jobs[job].tat ;
-totalWt+=jobs[job].wt ;
-}
-strcpy(prevJob , currentJob) ;
-if(count==processCount)
-break ;
-}
-printf("\n_________________________________________________\n") ;
-avgTat = (float)totalTat/processCount ;
-avgWt = (float)totalWt/processCount ;
-}
-void display()
-{
-int i = 0 ;
-printf("\n\n--------------------------------------------------------------
--------------------------------------\n") ;
-printf("Process name\tArrival Time\tBurst Time\tCPU Time\tTurn Around
-time\tWait Time\n");
-printf("------------------------------------------------------------------
----------------------------------\n");
-for(i=0 ; i<processCount ; i++)
-printf(" %s\t%d\t%d\t%d\t%d\t%d\n",jobs[i].name , jobs[i].at ,
-jobs[i].bt , jobs[i].ct , jobs[i].tat , jobs[i].wt ) ;
-printf("------------------------------------------------------------------
----------------------------------") ;
-printf("\n\nTotal Turn Around Time: %d",totalTat) ;
-printf("\nTotal Waiting Time: %d",totalWt) ;
-printf("\n\nAverage Turn Around Time: %f",avgTat) ;
-printf("\nAverage Waiting Time: %f\n",avgWt) ;
-}
-main()
-{
-system("clear");
-getProcess() ;
-process() ;
-display() ;
-}
-
-
-
-Slip17_2/Slip18_2 : Write the program to simulate FCFS CPU-scheduling. The arrival time and
-first CPU-burst of different jobs should be input to the system. Accept no. of Processes, arrival
-time and burst time. The output should give Gantt chart, turnaround time and waiting time for
-each process. Also find the average waiting time and turnaround time
-
-
-
-
-#include<stdio.h>
-void findWaitingTime(int processes[], int n,
-int bt[], int wt[])
-{
-wt[0] = 0;
-int i;
-for (i = 1; i < n ; i++ ){
-wt[i] = bt[i-1] + wt[i-1] ;
-}
-}
-void findTurnAroundTime( int processes[], int n,
-int bt[], int wt[], int tat[])
-{
-int i;
-for ( i = 0; i < n ; i++)
-tat[i] = bt[i] + wt[i];
-}
-void findavgTime( int processes[], int n, int bt[])
-{
-int wt[n], tat[n], total_wt = 0, total_tat = 0;
-findWaitingTime(processes, n, bt, wt);
-findTurnAroundTime(processes, n, bt, wt, tat);
-printf("Processes Burst time Waiting time Turn around time\n");
-int i;
-for ( i=0; i<n; i++)
-{
-total_wt = total_wt + wt[i];
-total_tat = total_tat + tat[i];
-printf(" %d ",(i+1));
-printf(" %d ", bt[i] );
-printf(" %d",wt[i] );
-printf(" %d\n",tat[i] );
-}
-int s=(float)total_wt / (float)n;
-int t=(float)total_tat / (float)n;
-printf("Average waiting time = %d",s);
-printf("\n");
-printf("Average turn around time = %d ",t);
-}
-int main()
-{
-int processes[] = { 1, 2, 3};
-int n = sizeof processes / sizeof processes[0];
-int burst_time[] = {10, 5, 8};
-findavgTime(processes, n, burst_time);
-return 0;
-}
+Slip30:
+Consider the following entities and their relationships
+Student (Stud_id,name,class)
+Competition (c_no,c_name,type)
+Relationship between student and competition is many-many with attribute rank and year.
+Createa RDB in 3NF for the above and solve the following. Using above database write a
+script in PHPto accept a competition name from user and display information of student
+who has secured 1st rank in that competition.
+HTML File
+<html>
+<form action=slip30.php method=get>
+Enter Comp. Name<input type=text name=t1><br>
+<input type=submit value="Display Ranker">
+</form>
+</html>
+PHP File
+<?php
+$con=pg_connect("host=localhost user=postgres password=nrc dbname=slip30");
+$cn=$_GET['t1'];
+$rs=pg_query($con,"select * from student,competition,stud_comp where cname='$cn'
+and srank=1 and id=sid and competition.cno=stud_comp.cno");
+while($row=pg_fetch_array($rs))
+{
+echo "$row[0] $row[1] $row[2]<br>";
+}
+?>
