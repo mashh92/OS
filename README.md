@@ -1117,3 +1117,196 @@ while($row=pg_fetch_array($rs))
 echo "$row[0] $row[1] $row[2]<br>";
 }
 ?>
+
+
+
+
+
+
+
+
+Slip 1
+#Q.2 A) Write a python program to Display column-wise mean, and median for SOCR HeightWeight dataset.import pandas as pddf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\slips-solved\SOCR-HeightWeight.csv")print("Column-Wise Mean:")print(df.mean())print("\nColumn-Wise Median:")print(df.median())
+
+# Q.2 B) Write a python program to compute sum of Manhattan distance between all pairs of points. import numpy as np# Define a list of points as NumPy arrayspoints = [np.array([1, 2]), np.array([3, 4]), np.array([5, 6])]# Initialize the sum of Manhattan distancesmanhattan_sum = 0# Calculate the sum of Manhattan distancesfor i in range(len(points)):    for j in range(i + 1, len(points)):        manhattan_sum += np.sum(np.abs(points[i] - points[j]))print("Sum of Manhattan distances between all pairs of points:", manhattan_sum)
+
+
+Slip2
+# Q.2 A) Write a Python program for Handling Missing Value. Replace missing value of salary, # age column with mean of that column.(Use Data.csv file)import pandas as pddf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\WT-FDS-slips-solved\Data.csv")print(df)agemean = df['Age'].mean()salarymean = df['Salary'].mean()df['Age'].fillna(agemean, inplace=True)df['Salary'].fillna(salarymean, inplace=True)print("\n\nMissing values Replaced with Mean:")print(df)
+
+#Q.2 B) Write a Python program to generate a line plot of name Vs salary import matplotlib.pyplot as pltimport pandas as pddf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\WT-FDS-slips-solved\Data.csv")names = df['Country']salary = df['Salary']plt.plot(names, salary, marker='o', linestyle='-', color='b')plt.title('Name vs Salary')plt.xlabel('Name')plt.ylabel('Salary')plt.grid(True)plt.show()
+
+#Q.2 C) Download the heights and weights dataset and load the dataset froma given csv file into a #dataframe. Print the first, last 10 rows and random 20 rows also display shape of the  dataset. import pandas as pd# Load the dataset into a DataFramedf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\WT-FDS-slips-solved\SOCR-HeightWeight.csv")# 1. Print the first rowprint("First 10 row:")print(df.head(10))# 2. Print the last 10 rowsprint("\nLast 10 rows:")print(df.tail(10))# 3. Print random 20 rowsprint("\nRandom 20 rows:")print(df.sample(20))# 4. Shape of Data Frameprint("\nShape of Data Frame:")print(df.shape)
+
+
+Slip3
+# Q.2 A)Write a Python program to create box plots to see how each feature i.e. Sepal Length, # Sepal Width, Petal Length, Petal Width are distributed across the three speciesimport matplotlib.pyplot as pltimport pandas as pdimport seaborn as sns# Load the Iris datasetiris = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\WT-FDS-slips-solved\iris.csv")# Create box plots for each feature across the three speciesplt.figure(figsize=(12, 6))plt.subplot(2, 2, 1)sns.boxplot(x="Species", y="SepalLengthCm", data=iris)plt.title("Sepal Length by Species")plt.subplot(2, 2, 2)sns.boxplot(x="Species", y="SepalWidthCm", data=iris)plt.title("Sepal Width by Species")plt.subplot(2, 2, 3)sns.boxplot(x="Species", y="PetalLengthCm", data=iris)plt.title("Petal Length by Species")plt.subplot(2, 2, 4)sns.boxplot(x="Species", y="PetalWidthCm", data=iris)plt.title("Petal Width by Species")plt.tight_layout()plt.show()
+
+#Q.2 B) Write a Python program to view basic statistical details of the data (Use Heights and Weights Dataset) import pandas as pddf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\WT-FDS-slips-solved\SOCR-HeightWeight.csv")print("Statistical Detail:")print(df.describe)
+
+
+Slip4
+ Q.2 A) Generate a random array of 50 integers and display them using a line chart, scatter # plot, histogram and box plot. Apply appropriate color, labels and styling optionsimport matplotlib.pyplot as pltimport numpy as np# Generate random datadata = np.random.randint(0, 100, 50)# Line chartplt.subplot(2,2,1)plt.plot(data, color='blue', marker='o')plt.title('Line Chart')plt.xlabel('Index')plt.ylabel('Value')# Scatter plotplt.subplot(2,2,2)plt.scatter(range(len(data)), data, color='green', marker='x')plt.title('Scatter Plot')plt.xlabel('Index')plt.ylabel('Value')# Histogramplt.subplot(2,2,3)plt.hist(data, bins=10, color='red', alpha=0.7)plt.title('Histogram')plt.xlabel('Value')plt.ylabel('Frequency')# Box plotplt.subplot(2,2,4)plt.boxplot(data)plt.title('Box Plot')plt.xlabel('Value')plt.tight_layout()plt.show()
+
+Q.2 B) Write a Python program to print the shape, number of rows-columns, data types, # feature names and the description of the data(Use Data.csv) import pandas as pddf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\slips-solved\Data.csv")print('Shape of the DataFrame:', df.shape)print('Number of rows:', df.shape[0])print('Number of columns:', df.shape[1])print('Data types of each column:\n', df.dtypes)print('Feature names:', list(df.columns))print('Description of the DataFrame:\n', df.describe())
+
+
+Slip5
+# Q.2 A) Generate a random array of 50 integers and display them using a line chart, scatter # plot, histogram and box plot. Apply appropriate color, labels and styling optionsimport matplotlib.pyplot as pltimport numpy as np# Generate random datadata = np.random.randint(0, 100, 50)# Line chartplt.subplot(2,2,1)plt.plot(data, color='blue', marker='o')plt.title('Line Chart')plt.xlabel('Index')plt.ylabel('Value')# Scatter plotplt.subplot(2,2,2)plt.scatter(range(len(data)), data, color='green', marker='x')plt.title('Scatter Plot')plt.xlabel('Index')plt.ylabel('Value')# Histogramplt.subplot(2,2,3)plt.hist(data, bins=10, color='red', alpha=0.7)plt.title('Histogram')plt.xlabel('Value')plt.ylabel('Frequency')# Box plotplt.subplot(2,2,4)plt.boxplot(data)plt.title('Box Plot')plt.xlabel('Value')plt.tight_layout()plt.show()
+
+ Q.2 B) Write a Python program to print the shape, number of rows-columns, data types, # feature names and the description of the data(Use Data.csv) import pandas as pddf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\slips-solved\Data.csv")print('Shape of the DataFrame:', df.shape)print('Number of rows:', df.shape[0])print('Number of columns:', df.shape[1])print('Data types of each column:\n', df.dtypes)print('Feature names:', list(df.columns))print('Description of the DataFrame:\n', df.describe())
+
+
+ Slip6
+Q.2 A) Write a Python program for Handling Missing Value. Replace missing value of salary, # age column with mean of that column.(Use Data.csv file)import pandas as pddf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\slips-solved\Data.csv")print(df)agemean = df['Age'].mean()salarymean = df['Salary'].mean()df['Age'].fillna(agemean, inplace=True)df['Salary'].fillna(salarymean, inplace=True)print("\n\nMissing values Replaced with Mean:")print(df)
+
+#Q.2 B) Write a Python program to generate a line plot of name Vs salary import matplotlib.pyplot as pltimport pandas as pddf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\slips-solved\Data.csv")names = df['Country']salary = df['Salary']plt.plot(names, salary, marker='o', linestyle='-', color='b')plt.title('Name vs Salary')plt.xlabel('Name')plt.ylabel('Salary')plt.grid(True)plt.show()
+
+#Q.2 C) Download the heights and weights dataset and load the dataset froma given csv file into a #dataframe. Print the first, last 10 rows and random 20 rows also display shape of the  dataset. import randomimport pandas as pd# Load the dataset into a DataFramedf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\slips-solved\SOCR-HeightWeight.csv")# 1. Print the first rowprint("First row:")print(df.head(10))# 2. Print the last 10 rowsprint("\nLast 10 rows:")print(df.tail(10))# 3. Print random 20 rowsprint("\nRandom 20 rows:")print(df.sample(20))print("Shape of dataframe: ",df.shape)
+
+
+Slip7
+Q.2) Write a Python program to perform the following tasks : #a. Apply OneHot coding on Country column. #b. Apply Label encoding on purchased column #(Data.csv have two categorical column the country column, and the purchased column)import numpy as npimport pandas as pdfrom sklearn.preprocessing import LabelEncoder, OneHotEncoderdf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\WT-FDS-slips-solved\Data.csv")#a. Apply OneHot coding on Country column. hotencoder = OneHotEncoder()enc_df = pd.DataFrame(hotencoder.fit_transform(df[['Country']]).toarray())df = df.join(enc_df)print('\n\nOneHot encoding on country column')print(df)#b. Apply Label encoding on purchased column labelencoder = LabelEncoder()df['Purchased'] = labelencoder.fit_transform(df['Purchased'])print('\n\n Label encoding on purchased column')print(df)
+
+
+Slip8
+Q.2) Write a program in python to perform following task :#1. Import Dataset from above link. #2. Standardizing Data (transform them into a standard Gaussian distribution with a #mean of 0 and a standard deviation of 1) (Use winequality-red.csv)import pandas as pdimport scipy.stats as sfrom sklearn import preprocessingdf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\slips-solved\winequality-red.csv")print('\nInitial Mean: ',s.tmean(df).round(2))print('\n\nInitial StandardvDeviation:')print('---------------------------------')print(round(df.std(),2))df_scaled = preprocessing.scale(df)df_scaled.mean(axis=0)df_scaled.std(axis=0)print('\nStandardized Data\n',df_scaled.round(2))print("\nScaled Mean:",s.tmean(df_scaled).round(2))print("\nScaled standard Deviation: ",round(df_scaled.std(),2))
+
+
+Slip9
+ Q.2 A) Generate a random array of 50 integers and display them using a line chart, scatter plot# Apply appropriate color, labels and styling optionsimport matplotlib.pyplot as pltimport numpy as np# Generate random datadata = np.random.randint(0, 100, 50)# Line chartplt.subplot(2,2,1)plt.plot(data, color='blue', marker='o')plt.title('Line Chart')plt.xlabel('Index')plt.ylabel('Value')# Scatter plotplt.subplot(2,2,2)plt.scatter(range(len(data)), data, color='green', marker='x')plt.title('Scatter Plot')plt.xlabel('Index')plt.ylabel('Value')plt.tight_layout()plt.show()
+
+Q.2 B) Create two lists, one representing subject names and the other representing marks #obtained in those subjects. Display the data in a pie chart.import matplotlib.pyplot as pltsubjects = ['WT', 'FDS', 'OS', 'CN', 'TCS']marks = [90, 88, 78, 95, 70]# Pie chartplt.pie(marks, labels=subjects, autopct='%1.1f%%')plt.title('Pie Chart')plt.show()
+
+3
+import pandas as pddf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\slips-solved\winequality-red.csv")print('Description of the dataset:')print(df.describe())print('\nShape of the dataset:', df.shape)print('\nFirst 3 rows from the dataset:')print(df.head(3))
+
+
+Slip10
+Demo
+A = [1,2,3]B = [5,3,2]dis = 0for i in range(len(A)):    dis += abs(A[i] - B[i])    print("First Array is: ",A)print("Second Array is: ",B)print("Manhattan Distance is: ",dis)
+
+Q.2 A) Write a python program to Display column-wise mean, and median for SOCR HeightWeight dataset.import pandas as pddf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\slips-solved\SOCR-HeightWeight.csv")print("Column-Wise Mean:")print(df.mean())print("\nColumn-Wise Median:")print(df.median())
+
+Q.2 B) Write a python program to compute sum of Manhattan distance between all pairs of points. import numpy as np# Define a list of points as NumPy arrayspoints = [np.array([1, 2]), np.array([3, 4]), np.array([5, 6])]# Initialize the sum of Manhattan distancesmanhattan_sum = 0# Calculate the sum of Manhattan distancesfor i in range(len(points)):    for j in range(i + 1, len(points)):        manhattan_sum += np.sum(np.abs(points[i] - points[j]))print("Sum of Manhattan distances between all pairs of points:", manhattan_sum)
+
+
+Slip11
+#A
+import matplotlib.pyplot as pltimport pandas as pddf = pd.read_csv("D:\Computer Science\TY\SEM5\FDS\iris.csv")df['Species'].value_counts().plot.pie(explode=[0.1,0.1,0.1],autopct='%1.1f%%',shadow=True)plt.title("Iris Species %")plt.show()
+
+#B) Write a Python program to view basic statistical details of the data.(Use wineequality-red.csv)import pandas as pddf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\slips-solved\winequality-red.csv")print("Statistical Details:")print(df.describe())
+
+
+Slip12
+Q.2 A) Generate a random array of 50 integers and display them using a line chart, scatter # plot, histogram and box plot. Apply appropriate color, labels and styling optionsimport matplotlib.pyplot as pltimport numpy as np# Generate random datadata = np.random.randint(0, 100, 50)# Line chartplt.subplot(2,2,1)plt.plot(data, color='blue', marker='o')plt.title('Line Chart')plt.xlabel('Index')plt.ylabel('Value')# Scatter plotplt.subplot(2,2,2)plt.scatter(range(len(data)), data, color='green', marker='x')plt.title('Scatter Plot')plt.xlabel('Index')plt.ylabel('Value')# Histogramplt.subplot(2,2,3)plt.hist(data, bins=10, color='red', alpha=0.7)plt.title('Histogram')plt.xlabel('Value')plt.ylabel('Frequency')# Box plotplt.subplot(2,2,4)plt.boxplot(data)plt.title('Box Plot')plt.xlabel('Value')plt.tight_layout()plt.show()
+
+Q.2 B) Write a Python program to create data frame containing column name, salary, department # add 10 rows with some missing and duplicate values to the data frame. Also drop all null and # empty values. Print the modified data frameimport pandas as pddf = pd.DataFrame(columns = ['name','salary','department'])df.loc[0] = ['jitu',85000,'Biology']df.loc[1] = ['Austin',95000,'computer']df.loc[2] = [None,65000,'commerce']df.loc[3] = ['saquib',77000,'Blockchain']df.loc[4] = ['Naufil',80000,'Electronices']df.loc[5] = [None,65000,'science']df.loc[6] = ['kunal',65000,'agriculture']df.loc[7] = ['Tanishq',77000,'Networks']df.loc[8] = ['Arpita',65000,'Math']df.loc[9] = ['vaishavi',85000,'computer']print("Original Data Frame")print(df)df = df.dropna()print("Modified Data Frame")print(df)
+
+
+Slip13
+Q.2 A) Write a Python program to create a graph to find relationship between the petal length # and petal width.(Use iris.csv dataset)import matplotlib.pyplot as pltimport pandas as pdimport seaborn as sns  # For loading the Iris dataset# Load the Iris datasetdf = pd.read_csv("D:\Computer Science\TY\SEM5\FDS\iris.csv")# Create a scatter plotsns.scatterplot(data=df, x="PetalLengthCm", y="PetalWidthCm", hue="Species")plt.title("Relationship Between Petal Length and Petal Width")plt.xlabel("Petal Length")plt.ylabel("Petal Width")plt.show()
+
+B
+import numpy as np# Input arrayarr = np.array([[0, 4], [2, 3]])# Find maximum and minimum valuesprint("Original flattened array:")print(arr)print("Maximum value of flattened array:")print(np.max(arr))print("Minimum value of flattened array:")print(np.min(arr))
+
+
+Slip14
+Q. 2 A) Write a Python NumPy program to compute the weighted average along the specified #axis of a given flattened array. import numpy as np# Create a flattened arrayarr = np.array([1, 2, 3, 4, 5])# Compute the weighted average of the flattened arrayweights = np.array([1, 2, 3, 4, 5])avg = np.average(arr, weights=weights)# Print the weighted averageprint('Weighted average of the flattened array:',avg)
+
+
+Q. 2 B) Write a Python program to view basic statistical details of the data (Use advertising.csv)import pandas as pddf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\slips-solved\Advertising.csv")print('Description of the dataset:')print(df.describe())
+
+
+Slip15
+ Q.2 A) Generate a random array of 50 integers and display them using a line chart, scatter # plot, histogram and box plot. Apply appropriate color, labels and styling optionsimport matplotlib.pyplot as pltimport numpy as np# Generate random datadata = np.random.randint(0, 100, 50)# Line chartplt.subplot(2,2,1)plt.plot(data, color='blue', marker='o')plt.title('Line Chart')plt.xlabel('Index')plt.ylabel('Value')# Scatter plotplt.subplot(2,2,2)plt.scatter(range(len(data)), data, color='green', marker='x')plt.title('Scatter Plot')plt.xlabel('Index')plt.ylabel('Value')# Histogramplt.subplot(2,2,3)plt.hist(data, bins=10, color='red', alpha=0.7)plt.title('Histogram')plt.xlabel('Value')plt.ylabel('Frequency')# Box plotplt.subplot(2,2,4)plt.boxplot(data)plt.title('Box Plot')plt.xlabel('Value')plt.tight_layout()plt.show()
+
+B
+import matplotlib.pyplot as pltsubjects = ['WT', 'FDS', 'OS', 'CN', 'TCS']marks = [90, 88, 78, 95, 70]# Pie chartplt.pie(marks, labels=subjects, autopct='%1.1f%%')plt.title('Pie Chart')plt.show()
+
+
+Slip16
+Q.2 A) Write a python program to create two lists, one representing subject names and the other # representing marks obtained in those subjects. Display the data in a pie chart and bar chartimport matplotlib.pyplot as pltsubjects = ['WT', 'FDS', 'OS', 'CN', 'TCS']marks = [90, 88, 78, 95, 70]# Pie chartplt.subplot(121)plt.pie(marks, labels=subjects, autopct='%1.1f%%')plt.title('Pie Chart')# Bar chartplt.subplot(122)plt.bar(subjects, marks, color='skyblue')plt.title('Bar Chart')plt.xlabel('Subjects')plt.ylabel('Marks')plt.show()
+
+Q.2 B) Write a python program to create a data frame for students information such as name, #graduation percentage and age. Display average age of students, average of graduation percentage.import pandas as pddf = pd.DataFrame(columns = ['name','age','Per'])df.loc[0] = ['jitu',3,85]df.loc[1] = ['Austin',19,95]df.loc[2] = ['saquib',20,77]df.loc[3] = ['Naufil',30,80]df.loc[4] = ['Kunal',21,65]df.loc[5] = ['Tanishq',18,77]df.loc[6] = ['Arpita',17,65]df.loc[7] = ['vaishavi',19,85]print(df)# Calculate the average age of studentsavg_age = df['age'].mean()# Calculate the average graduation percentageavg_pre = df['Per'].mean()# Print the average age and average graduation percentageprint('Average age of students:', avg_age)print('Average graduation percentage:', avg_pre)
+
+
+Slip17
+Q.2 A) Write a Python program to draw scatter plots to compare two features of the iris datasetimport matplotlib.pyplot as pltimport pandas as pdimport seaborn as sns  # For loading the Iris datasetiris = pd.read_csv("D:\Computer Science\TY\SEM5\FDS\iris.csv")sns.scatterplot(data=iris, x="SepalLengthCm", y="SepalWidthCm", hue="Species")plt.title("Comparison of Sepal Length and Sepal Width")plt.xlabel("Sepal Length (cm)")plt.ylabel("Sepal Width (cm)")plt.show()
+
+Q.2 B) Write a Python program to create a data frame containing columns name, age , salary, department# Add 10 rows to the data frame. View the data frame.import pandas as pddf = pd.DataFrame(columns = ['name','age','salary','department'])df.loc[0] = ['jitu',16,85000,'Biology']df.loc[1] = ['Austin',19,95000,'computer']df.loc[2] = ['nyaz',17,65000,'commerce']df.loc[3] = ['saquib',20,77000,'Blockchain']df.loc[4] = ['Naufil',18,80000,'Electronices']df.loc[5] = ['anjali',11,65000,'science']df.loc[6] = ['Kunal',19,65000,'agriculture']df.loc[7] = ['Tanishq',18,77000,'Networks']df.loc[8] = ['Arpita',30,65000,'Math']df.loc[9] = ['vaishavi',15,85000,'computer']print(df)
+
+
+Slip18
+#.2 A) Write a Python program to create box plots to see how each feature i.e. Sepal Length, #Sepal Width, Petal Length, Petal Width are distributed across the three species. (Use iris.csv dataset)import matplotlib.pyplot as pltimport pandas as pdimport seaborn as sns# Load the Iris datasetiris = pd.read_csv("D:\Computer Science\TY\SEM5\FDS\iris.csv")# Create box plots for each feature across the three speciesplt.subplot(2, 2, 1)sns.boxplot(x="Species", y="SepalLengthCm", data=iris)plt.title("Sepal Length by Species")plt.subplot(2, 2, 2)sns.boxplot(x="Species", y="SepalWidthCm", data=iris)plt.title("Sepal Width by Species")plt.subplot(2, 2, 3)sns.boxplot(x="Species", y="PetalLengthCm", data=iris)plt.title("Petal Length by Species")plt.subplot(2, 2, 4)sns.boxplot(x="Species", y="PetalWidthCm", data=iris)plt.title("Petal Width by Species")plt.tight_layout()plt.show()
+
+Q.2 B) Use the heights and weights dataset and load the dataset from a given csv file into a #dataframe. Print the first, last 5 rows and random 10 rowimport pandas as pddf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\slips-solved\SOCR-HeightWeight.csv")print("First five: \n",df.head(5))print("Last five:\n",df.tail(5))print("Random Ten:\n",df.sample(n=10))
+
+
+Slip19
+Q.2) Write a Python program [15] 1. To create a dataframe containing columns name, age and percentage. Add 10 rows to the dataframe. View the dataframe. 2. To print the shape, number of rows-columns, data types, feature names and the description of the data 3. To Add 5 rows with duplicate values and missing values. Add a column remarks with empty values. Display the data. """import pandas as pddf = pd.DataFrame(columns = ['name','age','Per'])# Q1df.loc[0] = ['jitu',3,85]df.loc[1] = ['Austin',19,95]df.loc[2] = [None,20,77]df.loc[3] = ['Naufil',30,80]df.loc[4] = [None,21,650]df.loc[5] = ['Tanishq',18,77]df.loc[6] = ['Arpita',17,65]df.loc[7] = ['vaishavi',19,85]print(df)# Q2print('\nShape:', df.shape)print('\nrows & columns:', df.shape[0], 'rows,', df.shape[1], 'columns')print('\nData types:\n',df.dtypes)print('\nFeature:\n',df.columns)print('\nDescription:\n',df.describe())# Q3df['remarks'] = Noneprint(df)
+
+
+Slip20
+Q.2 A) Generate a random array of 50 integers and display them using a line chart, scatter plot, # histogram and box plot. Apply appropriate color, labels and styling options. import matplotlib.pyplot as pltimport numpy as np# Generate random datadata = np.random.randint(0, 100, 50)# Line chartplt.subplot(2,2,1)plt.plot(data, color='blue', marker='o')plt.title('Line Chart')plt.xlabel('Index')plt.ylabel('Value')# Scatter plotplt.subplot(2,2,2)plt.scatter(range(len(data)), data, color='green', marker='x')plt.title('Scatter Plot')plt.xlabel('Index')plt.ylabel('Value')# Histogramplt.subplot(2,2,3)plt.hist(data, bins=10, color='red', alpha=0.7)plt.title('Histogram')plt.xlabel('Value')plt.ylabel('Frequency')# Box plotplt.subplot(2,2,4)plt.boxplot(data)plt.title('Box Plot')plt.xlabel('Value')plt.tight_layout()plt.show()
+
+Q.2 B) Add two outliers to the above data and display the box plotimport matplotlib.pyplot as pltimport numpy as np# Generate random data#np.random.seed(0)data = np.random.randint(0, 100, 50)# Adding outliersdata = np.append(data, [150, 200])# Box plot with outliersplt.boxplot(data, vert=False)plt.title('Box Plot with Outliers')plt.xlabel('Value')plt.show()
+
+
+Slip21
+Q.2 A) Import dataset “iris.csv”. Write a Python program to create a Bar plot to get the # frequency of the three species of the Iris dataimport matplotlib.pyplot as pltimport pandas as pdimport seaborn as snsdf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\WT-FDS-slips-solved\iris.csv")x= df["Species"]y = df["SepalLengthCm"]plt.bar(x,y,color='green')plt.xlabel("Classes")plt.ylabel("Sepal Lenght")plt.title("Iris Species Count")plt.show()
+
+
+Q.2 B)Write a Python program to create a histogram of the three species of the Iris dataimport matplotlib.pyplot as pltimport pandas as pd# Load the data from the CSV file into a pandas DataFramedf = pd.read_csv('D:\Computer Science\TY\SEM5\WT-1\WT-FDS-slips-solved\iris.csv')# Create a histogram of the petal length for each speciessetosa = df[df['Species'] == 'Iris-setosa']versicolor = df[df['Species'] == 'Iris-versicolor']virginica = df[df['Species'] == 'Iris-virginica']plt.hist(setosa['PetalLengthCm'], label='Iris-setosa')plt.hist(versicolor['PetalLengthCm'], label='Iris-versicolor')plt.hist(virginica['PetalLengthCm'], label='Iris-virginica')# Add labels and title to the plotplt.xlabel('Petal Length')plt.ylabel('Frequency')plt.title('Histogram of Petal Length for Three Species of Iris')plt.legend()plt.show()
+
+
+Slip22
+Q.2) Dataset Name: winequality-red.csv Write a program in python to perform following tasks a. Rescaling: Normalised the dataset using MinMaxScaler class """import pandas as pdfrom sklearn.preprocessing import MinMaxScalerdf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\WT-FDS-slips-solved\winequality-red.csv")print('\n\n Data Scaled between 0 to 1')scaler = MinMaxScaler(feature_range=(0, 1))scaled = scaler.fit_transform(df)print(scaled.round(2))
+
+b. Standardizing Data (transform them into a standard Gaussian distribution with a mean of 0 and a standard deviation of 1) import pandas as pdimport scipy.stats as sfrom sklearn import preprocessingdf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\WT-FDS-slips-solved\winequality-red.csv")print('\nInitial Mean: ',s.tmean(df).round(2))print('\n\nInitial StandardvDeviation:')print('---------------------------------')print(round(df.std(),2))df_scaled = preprocessing.scale(df)df_scaled.mean(axis=0)df_scaled.std(axis=0)print('\nStandardized Data\n',df_scaled.round(2))print("\nScaled Mean:",s.tmean(df_scaled).round(2))print("\nScaled standard Deviation: ",round(df_scaled.std(),2))
+
+#c. Normalizing Data ( rescale each observation to a length of 1 (a unit norm). For this, use the Normalizer class.)import pandas as pdimport scipy.stats as sfrom sklearn import preprocessingdf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\slips-solved\winequality-red.csv")dn = preprocessing.normalize(df,norm = 'l1')print("\n L1 Normalized Data")print("-----------------------")print(dn.round(2))
+
+
+Slip23
+Q.2) Dataset Name: winequality-red.csv Write a program in python to perform following tasks a. Rescaling: Normalised the dataset using MinMaxScaler class """import pandas as pdfrom sklearn.preprocessing import MinMaxScalerdf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\slips-solved\winequality-red.csv")print('\n\n Data Scaled between 0 to 1')scaler = MinMaxScaler(feature_range=(0, 1))scaled = scaler.fit_transform(df)print(scaled.round(2))
+
+b. Standardizing Data (transform them into a standard Gaussian distribution with a mean of 0 and a standard deviation of 1) import pandas as pdimport scipy.stats as sfrom sklearn import preprocessingdf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\slips-solved\winequality-red.csv")print('\nInitial Mean: ',s.tmean(df).round(2))print('\n\nInitial StandardvDeviation:')print('---------------------------------')print(round(df.std(),2))df_scaled = preprocessing.scale(df)df_scaled.mean(axis=0)df_scaled.std(axis=0)print('\nStandardized Data\n',df_scaled.round(2))print("\nScaled Mean:",s.tmean(df_scaled).round(2))print("\nScaled standard Deviation: ",round(df_scaled.std(),2))
+
+c. Binarizing Data using we use the Binarizer class (Using a binary threshold, it is possible # to transform our data by marking the values above it 1 and those equal to or below it, 0) import pandas as pdimport scipy.stats as sfrom sklearn import preprocessingdf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\slips-solved\winequality-red.csv")df_binarized = preprocessing.Binarizer(threshold=5).transform(df)print("\n Binarized data")print("-------------------")print(df_binarized)
+
+
+Slip24
+Q.2 A) Import dataset “iris.csv”. Write a Python program to create a Bar plot to get the # frequency of the three species of the Iris dataimport matplotlib.pyplot as pltimport pandas as pddf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\WT-FDS-slips-solved\iris.csv")x= df["Species"]y = df["SepalLengthCm"]plt.bar(x,y,color='green')plt.xlabel("Classes")plt.ylabel("Sepal Lenght")plt.title("Iris Species Count")plt.show()
+
+Q.2 B)Write a Python program to create a histogram of the three species of the Iris dataimport matplotlib.pyplot as pltimport pandas as pd# Load the data from the CSV file into a pandas DataFramedf = pd.read_csv('D:\Computer Science\TY\SEM5\WT-1\WT-FDS-slips-solved\iris.csv')# Create a histogram of the petal length for each speciessetosa = df[df['Species'] == 'Iris-setosa']versicolor = df[df['Species'] == 'Iris-versicolor']virginica = df[df['Species'] == 'Iris-virginica']plt.hist(setosa['PetalLengthCm'], label='Iris-setosa')plt.hist(versicolor['PetalLengthCm'], label='Iris-versicolor')plt.hist(virginica['PetalLengthCm'], label='Iris-virginica')# Add labels and title to the plotplt.xlabel('Petal Length')plt.ylabel('Frequency')plt.title('Histogram of Petal Length for Three Species of Iris')plt.legend()plt.show()
+
+
+Slip25
+Q.2 A) Generate a random array of 50 integers and display them using a line chart, scatter # plot, histogram and box plot. Apply appropriate color, labels and styling optionsimport matplotlib.pyplot as pltimport numpy as np# Generate random datadata = np.random.randint(0, 100, 50)# Line chartplt.subplot(2,2,1)plt.plot(data, color='blue', marker='o')plt.title('Line Chart')plt.xlabel('Index')plt.ylabel('Value')# Scatter plotplt.subplot(2,2,2)plt.scatter(range(len(data)), data, color='green', marker='x')plt.title('Scatter Plot')plt.xlabel('Index')plt.ylabel('Value')# Histogramplt.subplot(2,2,3)plt.hist(data, bins=10, color='red', alpha=0.7)plt.title('Histogram')plt.xlabel('Value')plt.ylabel('Frequency')# Box plotplt.subplot(2,2,4)plt.boxplot(data)plt.title('Box Plot')plt.xlabel('Value')plt.tight_layout()plt.show()
+
+Q.2 B) Create two lists, one representing subject names and the other representing marks # obtained in those subjects. Display the data in a pie chart. import matplotlib.pyplot as pltsubjects = ['WT', 'FDS', 'OS', 'CN', 'TCS']marks = [90, 88, 78, 95, 70]# Pie chartplt.pie(marks, labels=subjects, autopct='%1.1f%%')plt.title('Pie Chart')plt.show()
+
+
+Slip26
+Q.2 A) Generate a random array of 50 integers and display them using a line chart, scatter # plot, histogram and box plot. Apply appropriate color, labels and styling optionsimport matplotlib.pyplot as pltimport numpy as np# Generate random datadata = np.random.randint(0, 100, 50)# Line chartplt.figure(figsize=(12, 4))plt.subplot(2,2,1)plt.plot(data, color='blue', marker='o')plt.title('Line Chart')plt.xlabel('Index')plt.ylabel('Value')# Scatter plotplt.subplot(2,2,2)plt.scatter(range(len(data)), data, color='green', marker='x')plt.title('Scatter Plot')plt.xlabel('Index')plt.ylabel('Value')# Histogramplt.subplot(2,2,3)plt.hist(data, bins=10, color='red', alpha=0.7)plt.title('Histogram')plt.xlabel('Value')plt.ylabel('Frequency')# Box plotplt.subplot(2,2,4)plt.boxplot(data)plt.title('Box Plot')plt.xlabel('Value')plt.tight_layout()plt.show()
+
+2.Create two lists, one representing subject names and the other representing marks obtained in # those subjects. Display the data in bar chartimport matplotlib.pyplot as pltsubjects = ['WT', 'FDS', 'OS', 'CN', 'TCS']marks = [90, 88, 78, 95, 70]# Bar chartplt.bar(subjects, marks, color='skyblue')plt.title('Bar Chart')plt.xlabel('Subjects')plt.ylabel('Marks')plt.show()
+
+
+Slip27
+Q.2) Create a dataset data.csv having two categorical column (the country column, and the purchased column). [15] a. Apply OneHot coding on Country column. b. Apply Label encoding on purchased column"""import numpy as npimport pandas as pdfrom sklearn.preprocessing import LabelEncoder, OneHotEncoderdf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\WT-FDS-slips-solved\Data.csv")#a. Apply OneHot coding on Country column. hot_en = OneHotEncoder()enc_df = pd.DataFrame(hot_en.fit_transform(df[['Country']]).toarray())df = df.join(enc_df)print('\n\nOneHot encoding on country column')print(df)#b. Apply Label encoding on purchased column label_en = LabelEncoder()df['Purchased'] = label_en.fit_transform(df['Purchased'])print('\n\n Label encoding on purchased column')print(df)
+
+
+Slip28
+Q.2) Write a Python program [15] 1. To create a dataframe containing columns name, age and percentage. Add 10 rows to the dataframe. View the dataframe. 2. To print the shape, number of rows-columns, data types, feature names and the description of the data 3. To view basic statistical details of the data4. To Add 5 rows with duplicate values and missing values. Add a column remarks with empty values. Display the data. """import pandas as pddf = pd.DataFrame(columns = ['name','age','Per'])# Q1df.loc[0] = ['jitu',3,85000]df.loc[1] = ['Austin',19,95000]df.loc[2] = [None,20,77000]df.loc[3] = ['Naufil',30,80000]df.loc[4] = [None,21,65000]df.loc[5] = ['Tanishq',18,77000]df.loc[6] = ['Arpita',17,65000]df.loc[7] = ['vaishavi',19,85000]print(df)# Q2print('\nShape of the DataFrame:', df.shape)print('\nrows & columns in the DataFrame:', df.shape[0], 'rows,', df.shape[1], 'columns')print('\nData types of the DataFrame:')print(df.dtypes)print('\nFeature of the DataFrame:')print(df.columns)# Q3print('\nDescription of the DataFrame:')print(df.describe())# Q4df['remarks'] = Noneprint(df)
+
+
+Slip29
+Q.2) Create a dataset data.csv having two categorical column (the country column, and the purchased column). [15] a. Apply OneHot coding on Country column. b. Apply Label encoding on purchased column"""import numpy as npimport pandas as pdfrom sklearn.preprocessing import LabelEncoder, OneHotEncoderdf = pd.read_csv("D:\Computer Science\TY\SEM5\WT-1\slips-solved\Data.csv")#a. Apply OneHot coding on Country column. hot_en = OneHotEncoder()enc_df = pd.DataFrame(hot_en.fit_transform(df[['Country']]).toarray())df = df.join(enc_df)print('\n\nOneHot encoding on country column')print(df)#b. Apply Label encoding on purchased column label_en = LabelEncoder()df['Purchased'] = label_en.fit_transform(df['Purchased'])print('\n\n Label encoding on purchased column')print(df)
+
+
+Slip30
+ Q.2 A) Generate a random array of 50 integers and display them using a line chart, scatter # plot, histogram and box plot. Apply appropriate color, labels and styling optionsimport matplotlib.pyplot as pltimport numpy as np# Generate random datadata = np.random.randint(0, 100, 50)# Line chartplt.figure(figsize=(12, 4))plt.subplot(2,2,1)plt.plot(data, color='blue', marker='o')plt.title('Line Chart')plt.xlabel('Index')plt.ylabel('Value')# Scatter plotplt.subplot(2,2,2)plt.scatter(range(len(data)), data, color='green', marker='x')plt.title('Scatter Plot')plt.xlabel('Index')plt.ylabel('Value')# Histogramplt.subplot(2,2,3)plt.hist(data, bins=10, color='red', alpha=0.7)plt.title('Histogram')plt.xlabel('Value')plt.ylabel('Frequency')# Box plotplt.subplot(2,2,4)plt.boxplot(data)plt.title('Box Plot')plt.xlabel('Value')plt.tight_layout()plt.show()
+
+2.Create two lists, one representing subject names and the other representing marks obtained in # those subjects. Display the data in bar chartimport matplotlib.pyplot as pltsubjects = ['WT', 'FDS', 'OS', 'CN', 'TCS']marks = [90, 88, 78, 95, 70]# Bar chartplt.bar(subjects, marks, color='skyblue')plt.title('Bar Chart')plt.xlabel('Subjects')plt.ylabel('Marks')plt.show()
